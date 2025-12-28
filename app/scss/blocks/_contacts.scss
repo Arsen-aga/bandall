@@ -1,0 +1,123 @@
+.contacts {
+
+  &__wrapper {
+    display: flex;
+
+    @include md {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__inner {
+    width: 50%;
+    margin-left: auto;
+    padding: var(--indent) 0;
+    background-color: var(--light-color);
+
+    @media (max-width: 1430px) {
+      width: 60%;
+    }
+
+    @include md {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 605px;
+    width: 100%;
+    margin-left: 85px;
+
+    @include xl {
+      margin-left: 40px;
+    }
+
+    @include lg {
+      margin-left: 20px;
+    }
+
+    @include md {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__items {
+    display: flex;
+    gap: 30px 40px;
+    flex-wrap: wrap;
+
+    @include xl {
+      gap: 20px;
+    }
+    @include sm {
+        gap: 10px;
+        flex-direction: column;
+    }
+  }
+
+  &__item--phone {
+    width: 100%;
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(22/14*100%);
+    text-transform: uppercase;
+    color: #939393;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(26/18*100%);
+  }
+
+  &__item-phone {
+    font-size: 56px;
+    line-height: calc(66/56*100%);
+
+    @include xl {
+      font-size: 42px;
+    }
+
+    @include lg {
+      font-size: 36px;
+    }
+
+    @include md {
+      font-size: 26px;
+    }
+
+    @include sm {
+      font-size: 22px;
+    }
+  }
+
+
+
+  &__map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+
+    @media (max-width: 1430px) {
+      width: 40%;
+    }
+
+    @include md {
+      position: static;
+      width: auto;
+      height: 350px;
+    }
+  }
+
+
+}

@@ -1,0 +1,97 @@
+.wait {
+  padding-top: var(--indent);
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    line-height: calc(38/30*100%);
+    text-align: center;
+    margin: 20px 0 50px;
+
+    @include xl {
+      margin-bottom: 40px;
+    }
+
+    @include lg {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    @include md {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      font-size: 20px;
+      margin: 10px 0 20px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    @include xl {
+      gap: 40px;
+    }
+
+    @include lg {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    @include md {
+      gap: 10px;
+    }
+
+  }
+
+  &__btns{
+    display: flex;
+    gap: 10px;
+    max-width: 360px;
+    width: 100%;
+
+    @include md {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: calc(40/32*100%);
+    color: var(--default-color);
+
+    @include xl {
+      font-size: 26px;
+    }
+
+    svg {
+      height: 28px;
+      width: 18px;
+
+      path {
+        fill: var(--default-color);
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 360px;
+
+    @include lg {
+      font-size: 16px;
+    }
+  }
+}

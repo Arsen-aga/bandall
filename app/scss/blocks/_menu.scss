@@ -1,0 +1,169 @@
+.menu {
+  @include lg {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      min-height: 6px;
+      background-color: var(--primary);
+      right: -40px;
+      top: 10px;
+
+      @include xl {
+        right: -20px;
+      }
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144%;
+    color: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  position: relative;
+  background-color: var(--primary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  .bar {
+    transition: all .3s ease-in-out;
+    width: 20px;
+    height: 2px;
+    background-color: var(--default-color);
+    pointer-events: none;
+  }
+
+  &.active {
+    .bar {
+
+      &:nth-child(1) {
+        rotate: 45deg;
+        transform: translate(6px, 6px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        rotate: -45deg;
+        transform: translate(5px, -5px);
+      }
+    }
+  }
+
+  @include lg {
+    display: flex;
+  }
+}
+
+.popup-menu {
+  position: fixed;
+  z-index: 51;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, .25);
+  width: 100%;
+  max-width: 360px;
+  height: 100vh;
+  padding: 30px;
+  overflow-y: auto;
+  left: -150%;
+  top: 0;
+  transition: all .5s ease-in-out;
+
+  &.active {
+    left: 0;
+  }
+
+  &__burger {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+    font-size: 20px;
+    width: fit-content;
+  }
+
+  &__item {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      background-color: var(--primary);
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--light-color);
+  }
+
+  &__social {
+    display: none;
+
+    @include md {
+      margin-top: 10px;
+      display: flex;
+    }
+  }
+
+  &__phone {
+    display: none;
+    width: fit-content;
+
+    @include xs {
+      margin-top: 10px;
+      display: block;
+    }
+  }
+
+}

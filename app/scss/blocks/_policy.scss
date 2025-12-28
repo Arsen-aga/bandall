@@ -1,0 +1,14 @@
+.agreement,
+.policy{
+  padding-top: 220px;
+
+  @include lg {
+      padding-top: 150px;
+  }
+}
+
+.fancybox__container{
+  .quiz-block{
+    margin-top: 0;
+  }
+}

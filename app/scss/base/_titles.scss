@@ -1,0 +1,148 @@
+._title {
+  font-family: var(--font-default);
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 113%;
+  text-align: center;
+  background: linear-gradient(145deg, #111 0%, #7b848d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+
+
+  @include xl {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  @include lg {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  @include md {
+    font-size: 30px;
+    margin-bottom: 25px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include sm {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+}
+._title-white {
+  font-family: var(--font-default);
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 113%;
+  text-align: center;
+  color: var(--light-color);
+  margin-bottom: 50px;
+
+  @include xl {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  @include lg {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  @include md {
+    font-size: 30px;
+    margin-bottom: 25px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include sm {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+}
+
+._subtitle {
+  font-family: var(--font-default);
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 127%;
+  text-align: center;
+  margin: 20px 0 50px;
+
+  @include xl {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  @include lg {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  @include md {
+    font-size: 24px;
+    margin: 15px 0 25px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include sm {
+    font-size: 22px;
+    margin: 10px 0 15px;
+  }
+
+  @include xs {
+    font-size: 20px;
+  }
+
+}
+._subtitle-white {
+  font-family: var(--font-default);
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 127%;
+  text-align: center;
+  color: var(--light-color);
+  margin: 20px 0 50px;
+
+  @include xl {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  @include lg {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  @include md {
+    font-size: 24px;
+    margin: 15px 0 25px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include sm {
+    font-size: 22px;
+    margin: 10px 0 15px;
+  }
+
+  @include xs {
+    font-size: 20px;
+  }
+
+}

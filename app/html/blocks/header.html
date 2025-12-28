@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <meta content="images/social.png" property="og:image">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="body_wrapper">
+    <header class="header @@class">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-inner">
+            @@include('../components/logo.html', {"class": "header__top-logo"})
+            @@include('../components/social-block.html', {"class": "header__top-social"})
+            @@include('../components/phone-block.html', {"class": "header__top-phone"})
+            <div class="burger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#key">
+                    «Под ключ»
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#objects">
+                    Объекты
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#video-review">
+                    Видеообзоры
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#review">
+                    Отзывы
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#service">
+                    Сервис
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#guarantee">
+                    Гарантии
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#about">
+                    О команде
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#contacts">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__bottom-inner">
+            @@include('../components/logo.html', {"class": "header__bottom-logo"})
+            @@include('../components/social-block.html', {"class": "header__bottom-social"})
+            @@include('../components/phone-block.html', {"class": "header__bottom-phone"})
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="popup-menu">
+      <div class="burger popup-menu__burger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="popup-menu__nav">
+        <ul class="popup-menu__list">
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#key">
+              «Под ключ»
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#objects">
+              Объекты
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#video-review">
+              Видеообзоры
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#review">
+              Отзывы
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#service">
+              Сервис
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#guarantee">
+              Гарантии
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#about">
+              О команде
+            </a>
+          </li>
+          <li class="popup-menu__item">
+            <a class="popup-menu__link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      @@include('../components/social-block.html', {"class": "popup-menu__social"})
+      @@include('../components/phone-block.html', {"class": "popup-menu__phone"})
+    </div>

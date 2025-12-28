@@ -1,0 +1,133 @@
+.front-block-2 {
+  background-image: url(../images/front-block-2-bg.webp);
+  padding: 214px 0 var(--indent);
+  color: var(--light-color);
+
+  @include lg {
+    padding-top: 150px;
+  }
+
+  @include md {
+    .overlay {
+      display: block;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  @include xs {
+    padding-top: 120px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 111%;
+    color: var(--light-color);
+    margin-bottom: 20px;
+
+    @include xl {
+      font-size: 62px;
+    }
+
+    @include lg {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    @include md {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    @include sm {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: calc(36/28*100%);
+    color: var(--light-color);
+    margin-bottom: 30px;
+
+    span {
+      font-weight: 600;
+    }
+
+    @include xl {
+      font-size: 26px;
+    }
+
+    @include lg {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+
+    @include md {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include xs {
+      font-size: 18px;
+      margin-bottom: 15px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__info-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(26/18*100%);
+    color: var(--light-color);
+
+    @include xs {
+      font-size: 16px;
+    }
+  }
+
+  &__bottom {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__number {
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: calc(32/24*100%);
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--default-color);
+
+    @include lg {
+      padding: 20px;
+      font-size: 22px;
+    }
+
+    @include xs {
+      font-size: 20px;
+    }
+  }
+
+  &__btn{
+    @include lg {
+        max-width: none;
+    }
+  }
+}
