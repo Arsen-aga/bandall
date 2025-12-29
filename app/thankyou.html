@@ -1,220 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <meta content="images/social.png" property="og:image" />
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
-  <meta content="images/social.png" property="og:image">
-  <title>Главная страница</title>
-  <link rel="stylesheet" href="./css/style.min.css">
-</head>
+  <body>
+    <div class="body_wrapper">
+      <header class="header top-none">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <a class="logo header__top-logo" href="/">
+  <svg width="104" height="81" viewBox="0 0 104 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M43.5903 0.329166C35.4191 1.81117 27.0566 6.48078 21.2488 12.804C18.7525 15.5219 15.5191 19.9674 15.5191 20.6815C15.5191 20.8743 18.6439 21.0325 22.4625 21.0325H29.4063L27.1643 18.738L24.9222 16.4435L26.2683 15.0102C28.3132 12.8339 32.8913 9.66839 36.1457 8.18087C40.2966 6.2834 43.866 5.4161 48.8394 5.09586C60.6768 4.33393 72.0427 9.71164 79.4211 19.5657C80.5302 21.0473 80.6439 21.0859 83.4757 20.946L86.3891 20.8025L84.2297 17.5818C78.9929 9.77238 70.8851 3.92673 61.5404 1.22361C57.7505 0.12672 47.5166 -0.383078 43.5903 0.329166ZM44.8884 16.8806C38.3754 18.2825 34.0835 23.2107 34.0579 29.3186C34.0424 32.9985 35.2917 35.8705 37.9683 38.3081C40.3674 40.4927 43.3205 41.7833 49.8682 43.5096C57.4036 45.4959 59.7571 46.5969 60.549 48.5068C61.8604 51.6715 59.6461 55.3597 55.786 56.4405C50.5187 57.9151 44.8168 56.2711 42.7258 52.6745C42.0772 51.5592 41.4254 50.0362 41.2775 49.2904L41.0087 47.9345L37.5068 48.0753C31.6972 48.309 31.92 48.1549 32.6758 51.4212C34.7079 60.2018 41.136 64.7265 51.5781 64.7265C62.2921 64.7265 69.0434 59.7008 69.7185 51.2219C70.0736 46.7612 68.959 43.5538 66.0258 40.5972C63.3009 37.8508 61.3199 36.9789 52.2965 34.5551C44.3092 32.4096 42.9056 31.4857 42.9056 28.3745C42.9056 25.5807 46.2144 24.0421 51.6301 24.3182C55.786 24.5294 57.5839 25.6216 58.5406 28.5143C59.0888 30.1726 59.3677 30.4606 60.4025 30.4362C61.0721 30.4201 63.0854 30.3686 64.877 30.3212L68.1342 30.2347L67.853 28.1669C67.208 23.4233 64.033 19.5809 59.2102 17.7078C56.5122 16.6602 48.1561 16.1775 44.8884 16.8806ZM0 40.5277V57.841H3.1951H6.3902V50.4793V43.1176H8.69524C9.96278 43.1176 11.5841 43.4222 12.2979 43.794C13.7777 44.5656 16.4452 48.0063 20.0766 53.8275L22.5802 57.841H26.1245C28.074 57.841 29.6688 57.7094 29.6688 57.5484C29.6688 56.6751 22.8769 46.2496 21.1164 44.4197L19.0487 42.271L21.0183 41.6761C27.204 39.8081 29.342 32.0714 25.1747 26.6348C23.2037 24.0637 21.4209 23.6841 10.1559 23.4371L0 23.2144V40.5277ZM72.6949 23.9082C72.815 24.2248 74.2893 28.2102 75.9708 32.7652C77.6528 37.3203 80.4075 44.774 82.0926 49.3291L85.1567 57.611L88.3948 57.7449C90.7203 57.8415 91.6962 57.7117 91.8573 57.2847C92.532 55.5014 97.561 41.7727 100.165 34.6057C101.821 30.0506 103.376 25.848 103.622 25.2669C104.404 23.4168 104.204 23.2871 100.772 23.4279L97.4752 23.5631L96.2474 27.0139C95.5723 28.9119 93.6356 34.3986 91.9431 39.2067C90.2511 44.0148 88.7266 48.1116 88.555 48.3104C88.3833 48.5096 86.2253 42.9709 83.7591 36.0026L79.2755 23.3331H75.8759C73.3445 23.3331 72.5324 23.4798 72.6949 23.9082ZM19.2843 29.8859C20.7955 30.8848 21.3378 33.3013 20.4642 35.1417C19.5914 36.9794 17.5283 37.5402 11.5252 37.5706L6.3902 37.5964V33.1793V28.7619L12.2308 28.9234C16.8204 29.0499 18.3312 29.256 19.2843 29.8859ZM15.5191 60.3555C15.5191 61.0217 18.6407 65.3449 21.1721 68.1847C24.4973 71.9152 30.2243 76.0055 34.9759 78.0438C40.3989 80.3701 44.191 81.0538 51.3498 80.9968C56.8199 80.953 58.3179 80.7727 61.7513 79.7425C71.0485 76.9543 78.1471 71.883 84.0362 63.8224C84.683 62.9367 85.4571 61.7464 85.7561 61.1768L86.2997 60.1415H79.3403H72.3804L74.6147 62.4283C76.844 64.7095 76.8472 64.7168 75.9695 65.6946C72.7155 69.3188 65.6255 73.2946 59.5658 74.8935C54.5837 76.208 46.8064 76.2255 41.9307 74.933C34.2396 72.8943 25.9374 67.2023 22.1443 61.3673C21.4195 60.2515 21.0863 60.1415 18.4335 60.1415C16.8304 60.1415 15.5191 60.2377 15.5191 60.3555Z" fill="#EB3500"/>
+</svg>
 
-<body>
-  <div class="body_wrapper">
-    <header class="header top-none">
-      <div class="header__top">
-        <div class="container">
-          <div class="header__top-inner">
-            <a class="logo header__top-logo" href="/">
-  
+  <p class="logo__text">
+    Разработка и внедрение<br />
+    автоматических линий
+  </p>
 </a>
-            <div class="social-block header__top-social">
-  
-  <div class="social-block__info">
-    <div class="social-block__top">
-      <span>5.0</span>
-      <div class="social-block__stars">
-        
-        
-        
-        
-        
-      </div>
-    </div>
-    <p class="social-block__text">
-      на основе 15 оценок<br>
-      в 2ГИС
-    </p>
+ <div class="mail-block header__top-mail">
+  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 0H2.25C1.65326 0 1.08097 0.237053 0.65901 0.65901C0.237053 1.08097 0 1.65326 0 2.25V12.75C0 13.3467 0.237053 13.919 0.65901 14.341C1.08097 14.7629 1.65326 15 2.25 15H18.75C19.3467 15 19.919 14.7629 20.341 14.341C20.7629 13.919 21 13.3467 21 12.75V2.25C21 1.65326 20.7629 1.08097 20.341 0.65901C19.919 0.237053 19.3467 0 18.75 0ZM18.429 1.5L10.8225 7.56375C10.605 7.76475 10.3942 7.76475 10.1355 7.527L2.571 1.5H18.429ZM18.75 13.5H2.25C2.05109 13.5 1.86032 13.421 1.71967 13.2803C1.57902 13.1397 1.5 12.9489 1.5 12.75V2.56425L9.15825 8.664C9.52303 9.01399 10.0073 9.21213 10.5128 9.21825C10.9919 9.21643 11.4521 9.03125 11.799 8.70075L19.5 2.565V12.75C19.5 12.9489 19.421 13.1397 19.2803 13.2803C19.1397 13.421 18.9489 13.5 18.75 13.5Z" fill="#EB3500"/>
+</svg>
+
+  <div class="mail-block__info">
+    <a class="mail-block__mail" href="mailto:info@rsv31.ru"> info@rsv31.ru </a>
+    <a class="mail-block__link" href="#callback" data-fancybox>
+      Напишите нам на почту
+    </a>
   </div>
 </div>
-            <div class="phone-block header__top-phone">
-  <a class="phone-block__num" href="tel:+79279395000">
+
+              <div class="social-block header__top-phone">
+  
+  <a class="social-block__num" href="tel:+79279395000">
     +7 927 939 50 00
   </a>
-  <a class="phone-block__link" href="#callback" data-fancybox="">
+  <a class="social-block__link" href="#callback" data-fancybox="">
     Заказать обратный звонок
   </a>
 </div>
-            <div class="burger">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
+
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a class="menu__link" href="#key"> О технологии </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#objects"> Отрасли </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#video-review">
+                      Преимущества
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#review"> Каталог </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#service"> Сервис </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#guarantee"> Контакты </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <a class="header__top-btn" href="#callback" data-fancybox>
+                Расчет стоимости
+              </a>
             </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__bottom-inner">
+              <a class="logo header__bottom-logo" href="/">
+  <svg width="104" height="81" viewBox="0 0 104 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M43.5903 0.329166C35.4191 1.81117 27.0566 6.48078 21.2488 12.804C18.7525 15.5219 15.5191 19.9674 15.5191 20.6815C15.5191 20.8743 18.6439 21.0325 22.4625 21.0325H29.4063L27.1643 18.738L24.9222 16.4435L26.2683 15.0102C28.3132 12.8339 32.8913 9.66839 36.1457 8.18087C40.2966 6.2834 43.866 5.4161 48.8394 5.09586C60.6768 4.33393 72.0427 9.71164 79.4211 19.5657C80.5302 21.0473 80.6439 21.0859 83.4757 20.946L86.3891 20.8025L84.2297 17.5818C78.9929 9.77238 70.8851 3.92673 61.5404 1.22361C57.7505 0.12672 47.5166 -0.383078 43.5903 0.329166ZM44.8884 16.8806C38.3754 18.2825 34.0835 23.2107 34.0579 29.3186C34.0424 32.9985 35.2917 35.8705 37.9683 38.3081C40.3674 40.4927 43.3205 41.7833 49.8682 43.5096C57.4036 45.4959 59.7571 46.5969 60.549 48.5068C61.8604 51.6715 59.6461 55.3597 55.786 56.4405C50.5187 57.9151 44.8168 56.2711 42.7258 52.6745C42.0772 51.5592 41.4254 50.0362 41.2775 49.2904L41.0087 47.9345L37.5068 48.0753C31.6972 48.309 31.92 48.1549 32.6758 51.4212C34.7079 60.2018 41.136 64.7265 51.5781 64.7265C62.2921 64.7265 69.0434 59.7008 69.7185 51.2219C70.0736 46.7612 68.959 43.5538 66.0258 40.5972C63.3009 37.8508 61.3199 36.9789 52.2965 34.5551C44.3092 32.4096 42.9056 31.4857 42.9056 28.3745C42.9056 25.5807 46.2144 24.0421 51.6301 24.3182C55.786 24.5294 57.5839 25.6216 58.5406 28.5143C59.0888 30.1726 59.3677 30.4606 60.4025 30.4362C61.0721 30.4201 63.0854 30.3686 64.877 30.3212L68.1342 30.2347L67.853 28.1669C67.208 23.4233 64.033 19.5809 59.2102 17.7078C56.5122 16.6602 48.1561 16.1775 44.8884 16.8806ZM0 40.5277V57.841H3.1951H6.3902V50.4793V43.1176H8.69524C9.96278 43.1176 11.5841 43.4222 12.2979 43.794C13.7777 44.5656 16.4452 48.0063 20.0766 53.8275L22.5802 57.841H26.1245C28.074 57.841 29.6688 57.7094 29.6688 57.5484C29.6688 56.6751 22.8769 46.2496 21.1164 44.4197L19.0487 42.271L21.0183 41.6761C27.204 39.8081 29.342 32.0714 25.1747 26.6348C23.2037 24.0637 21.4209 23.6841 10.1559 23.4371L0 23.2144V40.5277ZM72.6949 23.9082C72.815 24.2248 74.2893 28.2102 75.9708 32.7652C77.6528 37.3203 80.4075 44.774 82.0926 49.3291L85.1567 57.611L88.3948 57.7449C90.7203 57.8415 91.6962 57.7117 91.8573 57.2847C92.532 55.5014 97.561 41.7727 100.165 34.6057C101.821 30.0506 103.376 25.848 103.622 25.2669C104.404 23.4168 104.204 23.2871 100.772 23.4279L97.4752 23.5631L96.2474 27.0139C95.5723 28.9119 93.6356 34.3986 91.9431 39.2067C90.2511 44.0148 88.7266 48.1116 88.555 48.3104C88.3833 48.5096 86.2253 42.9709 83.7591 36.0026L79.2755 23.3331H75.8759C73.3445 23.3331 72.5324 23.4798 72.6949 23.9082ZM19.2843 29.8859C20.7955 30.8848 21.3378 33.3013 20.4642 35.1417C19.5914 36.9794 17.5283 37.5402 11.5252 37.5706L6.3902 37.5964V33.1793V28.7619L12.2308 28.9234C16.8204 29.0499 18.3312 29.256 19.2843 29.8859ZM15.5191 60.3555C15.5191 61.0217 18.6407 65.3449 21.1721 68.1847C24.4973 71.9152 30.2243 76.0055 34.9759 78.0438C40.3989 80.3701 44.191 81.0538 51.3498 80.9968C56.8199 80.953 58.3179 80.7727 61.7513 79.7425C71.0485 76.9543 78.1471 71.883 84.0362 63.8224C84.683 62.9367 85.4571 61.7464 85.7561 61.1768L86.2997 60.1415H79.3403H72.3804L74.6147 62.4283C76.844 64.7095 76.8472 64.7168 75.9695 65.6946C72.7155 69.3188 65.6255 73.2946 59.5658 74.8935C54.5837 76.208 46.8064 76.2255 41.9307 74.933C34.2396 72.8943 25.9374 67.2023 22.1443 61.3673C21.4195 60.2515 21.0863 60.1415 18.4335 60.1415C16.8304 60.1415 15.5191 60.2377 15.5191 60.3555Z" fill="#EB3500"/>
+</svg>
 
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link" href="#key">
-                    «Под ключ»
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#objects">
-                    Объекты
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#video-review">
-                    Видеообзоры
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#review">
-                    Отзывы
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#service">
-                    Сервис
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#guarantee">
-                    Гарантии
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#about">
-                    О команде
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#contacts">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <div class="header__bottom">
-        <div class="container">
-          <div class="header__bottom-inner">
-            <a class="logo header__bottom-logo" href="/">
-  
+  <p class="logo__text">
+    Разработка и внедрение<br />
+    автоматических линий
+  </p>
 </a>
-            <div class="social-block header__bottom-social">
-  
-  <div class="social-block__info">
-    <div class="social-block__top">
-      <span>5.0</span>
-      <div class="social-block__stars">
-        
-        
-        
-        
-        
-      </div>
-    </div>
-    <p class="social-block__text">
-      на основе 15 оценок<br>
-      в 2ГИС
-    </p>
+
+              <div class="mail-block header__bottom-mail">
+  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 0H2.25C1.65326 0 1.08097 0.237053 0.65901 0.65901C0.237053 1.08097 0 1.65326 0 2.25V12.75C0 13.3467 0.237053 13.919 0.65901 14.341C1.08097 14.7629 1.65326 15 2.25 15H18.75C19.3467 15 19.919 14.7629 20.341 14.341C20.7629 13.919 21 13.3467 21 12.75V2.25C21 1.65326 20.7629 1.08097 20.341 0.65901C19.919 0.237053 19.3467 0 18.75 0ZM18.429 1.5L10.8225 7.56375C10.605 7.76475 10.3942 7.76475 10.1355 7.527L2.571 1.5H18.429ZM18.75 13.5H2.25C2.05109 13.5 1.86032 13.421 1.71967 13.2803C1.57902 13.1397 1.5 12.9489 1.5 12.75V2.56425L9.15825 8.664C9.52303 9.01399 10.0073 9.21213 10.5128 9.21825C10.9919 9.21643 11.4521 9.03125 11.799 8.70075L19.5 2.565V12.75C19.5 12.9489 19.421 13.1397 19.2803 13.2803C19.1397 13.421 18.9489 13.5 18.75 13.5Z" fill="#EB3500"/>
+</svg>
+
+  <div class="mail-block__info">
+    <a class="mail-block__mail" href="mailto:info@rsv31.ru"> info@rsv31.ru </a>
+    <a class="mail-block__link" href="#callback" data-fancybox>
+      Напишите нам на почту
+    </a>
   </div>
 </div>
-            <div class="phone-block header__bottom-phone">
-  <a class="phone-block__num" href="tel:+79279395000">
+
+              <div class="social-block header__bottom-phone">
+  
+  <a class="social-block__num" href="tel:+79279395000">
     +7 927 939 50 00
   </a>
-  <a class="phone-block__link" href="#callback" data-fancybox="">
+  <a class="social-block__link" href="#callback" data-fancybox="">
     Заказать обратный звонок
   </a>
 </div>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-    <div class="popup-menu">
-      <div class="burger popup-menu__burger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <nav class="popup-menu__nav">
-        <ul class="popup-menu__list">
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#key">
-              «Под ключ»
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#objects">
-              Объекты
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#video-review">
-              Видеообзоры
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#review">
-              Отзывы
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#service">
-              Сервис
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#guarantee">
-              Гарантии
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#about">
-              О команде
-            </a>
-          </li>
-          <li class="popup-menu__item">
-            <a class="popup-menu__link" href="#contacts">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="social-block popup-menu__social">
-  
-  <div class="social-block__info">
-    <div class="social-block__top">
-      <span>5.0</span>
-      <div class="social-block__stars">
-        
-        
-        
-        
-        
-      </div>
-    </div>
-    <p class="social-block__text">
-      на основе 15 оценок<br>
-      в 2ГИС
-    </p>
+      </header>
+      <div class="popup-menu">
+        <div class="burger popup-menu__burger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav class="popup-menu__nav">
+          <ul class="popup-menu__list">
+            <li class="popup-menu__item">
+              <a class="popup-menu__link" href="#key"> О технологии </a>
+            </li>
+            <li class="popup-menu__item">
+              <a class="popup-menu__link" href="#objects"> Отрасли </a>
+            </li>
+            <li class="popup-menu__item">
+              <a class="popup-menu__link" href="#video-review">
+                Преимущества
+              </a>
+            </li>
+            <li class="popup-menu__item">
+              <a class="popup-menu__link" href="#review"> Каталог </a>
+            </li>
+            <li class="popup-menu__item">
+              <a class="popup-menu__link" href="#service"> Сервис </a>
+            </li>
+            <li class="popup-menu__item">
+              <a class="popup-menu__link" href="#guarantee"> Контакты </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mail-block popup-menu__mail">
+  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 0H2.25C1.65326 0 1.08097 0.237053 0.65901 0.65901C0.237053 1.08097 0 1.65326 0 2.25V12.75C0 13.3467 0.237053 13.919 0.65901 14.341C1.08097 14.7629 1.65326 15 2.25 15H18.75C19.3467 15 19.919 14.7629 20.341 14.341C20.7629 13.919 21 13.3467 21 12.75V2.25C21 1.65326 20.7629 1.08097 20.341 0.65901C19.919 0.237053 19.3467 0 18.75 0ZM18.429 1.5L10.8225 7.56375C10.605 7.76475 10.3942 7.76475 10.1355 7.527L2.571 1.5H18.429ZM18.75 13.5H2.25C2.05109 13.5 1.86032 13.421 1.71967 13.2803C1.57902 13.1397 1.5 12.9489 1.5 12.75V2.56425L9.15825 8.664C9.52303 9.01399 10.0073 9.21213 10.5128 9.21825C10.9919 9.21643 11.4521 9.03125 11.799 8.70075L19.5 2.565V12.75C19.5 12.9489 19.421 13.1397 19.2803 13.2803C19.1397 13.421 18.9489 13.5 18.75 13.5Z" fill="#EB3500"/>
+</svg>
+
+  <div class="mail-block__info">
+    <a class="mail-block__mail" href="mailto:info@rsv31.ru"> info@rsv31.ru </a>
+    <a class="mail-block__link" href="#callback" data-fancybox>
+      Напишите нам на почту
+    </a>
   </div>
 </div>
-      <div class="phone-block popup-menu__phone">
-  <a class="phone-block__num" href="tel:+79279395000">
+ <div class="social-block popup-menu__phone">
+  
+  <a class="social-block__num" href="tel:+79279395000">
     +7 927 939 50 00
   </a>
-  <a class="phone-block__link" href="#callback" data-fancybox="">
+  <a class="social-block__link" href="#callback" data-fancybox="">
     Заказать обратный звонок
   </a>
 </div>
+      </div>
     </div>
+  </body>
+</html>
+
 <main class="main" id="thankyou">
   <section class="front-block-2 _image-wrapper relative">
   <div class="overlay"></div>
@@ -353,11 +318,11 @@
         </a>
       </div>
 
-      <div class="phone-block footer__phone">
-        <a class="phone-block__num footer__phone-num" href="tel:+79279395000">
+      <div class="social-block footer__phone">
+        <a class="social-block__num footer__phone-num" href="tel:+79279395000">
           +7 927 939 50 00
         </a>
-        <a class="phone-block__link" href="#callback" data-fancybox="">
+        <a class="social-block__link" href="#callback" data-fancybox="">
           Вам перезвонить?
         </a>
       </div>

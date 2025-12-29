@@ -82,7 +82,10 @@ a {
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 301px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   width: 100%;
 
   @include lg {
@@ -97,49 +100,80 @@ a {
     max-width: 140px;
   }
 
-}
-
-.social-block {
-  display: flex;
-  align-items: start;
-  gap: 10px;
-  max-width: 210px;
-  width: 100%;
-
   svg {
-    border-radius: 10px;
-  }
-
-  &__top {
-    display: flex;
-    align-items: end;
-    gap: 9px;
-
-    span {
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 125%;
-      color: var(--light-color);
-
-      @include lg {
-        font-size: 24px;
-      }
-    }
+    max-width: 104px;
+    width: 100%;
   }
 
   &__text {
+    padding-left: 15px;
+    position: relative;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--light-color);
+    font-size: 14px;
+    line-height: calc(22/14*100%);
 
-    @include lg {
-      font-size: 14px;
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      height: 31px;
+      width: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+}
+
+.mail-block {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+  max-width: 198px;
+  width: 100%;
+  height: fit-content;
+
+  svg {
+    margin-top: 14px;
+    width: 21px;
+    min-width: 21px;
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mail {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: calc(40/24*100%);
+    transition: all .3s ease-in-out;
+    &:hover{
+      color: var(--primary-hover);
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(22/14*100%);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+    &:hover{
+      color: var(--primary-hover);
+      opacity: 1;
     }
   }
 }
 
-.phone-block {
+.social-block {
   max-width: 241px;
 
   &__num {
@@ -355,7 +389,7 @@ a {
   li {
     position: relative;
     padding-left: 16px;
-      
+
     &::before {
       position: absolute;
       content: '';
