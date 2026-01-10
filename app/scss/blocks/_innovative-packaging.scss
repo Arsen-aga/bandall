@@ -4,6 +4,11 @@
 
   &__title {
     margin: 0;
+
+    span {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
   }
 
   &__items {
@@ -28,7 +33,7 @@
     gap: 10px;
 
     @include lg {
-        width: 280px;
+      width: 280px;
     }
   }
 
