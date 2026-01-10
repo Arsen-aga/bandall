@@ -1,0 +1,77 @@
+.video-block {
+  padding: var(--indent) 0 400px;
+  background-color: var(--accent);
+  position: relative;
+  overflow: hidden;
+
+  @include xl {
+    padding-bottom: 300px;
+  }
+  @include lg {
+    padding-bottom: 180px;
+  }
+  @include md {
+    padding-bottom: 120px;
+  }
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__video {
+    position: relative;
+    display: block;
+    padding-bottom: calc(550 / 1000 * 100%);
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  &__descr {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(26.65px);
+    border-radius: 100px;
+    padding: 8px 20px;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(22 / 14 * 100%);
+    text-transform: uppercase;
+    color: var(--light-color);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 75px;
+      height: 75px;
+      background-image: url(../images/icons/line-to-top.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      right: -90px;
+      bottom: 15px;
+    }
+    @include lg {
+        margin-top: 30px;
+    }
+
+    @include md {
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center;
+        &::after {
+          display: none;
+        }
+    }
+
+  }
+
+  &__image-bg {
+    position: absolute;
+    bottom: -84px;
+    right: -279px;
+    width: 63.594%;
+  }
+}

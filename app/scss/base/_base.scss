@@ -80,6 +80,41 @@ a {
     justify-content: center;
   }
 }
+.play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    div {
+      scale: 1.2;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--primary-2);
+    box-shadow: 0px 20px 40px rgba(250, 185, 0, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
+    transition: all .3s ease-in-out;
+
+    @include md {
+      width: 60px;
+      height: 60px;
+    }
+
+  }
+}
 
 .logo {
   max-width: 301px;
@@ -249,16 +284,6 @@ a {
   max-width: 1880px;
   width: 100%;
   margin: 0 auto;
-}
-
-.section-img {
-  margin-top: var(--indent);
-  position: relative;
-  padding-bottom: calc(590/1880*100%);
-
-  &__mt50 {
-    margin-top: 50px;
-  }
 }
 
 ._main-btn {
@@ -506,65 +531,7 @@ a {
   }
 }
 
-.play {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  &:hover {
-    div {
-      scale: 1.2;
-    }
-  }
-
-  &__youtube {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 70px;
-    background-color: #FF0000;
-    border-radius: 30%;
-    transition: all .3s ease-in-out;
-
-    @include lg {
-      width: 84px;
-      height: 64px;
-      padding: 30px;
-    }
-
-    @include xs {
-      width: 70px;
-      height: 30px;
-      padding: 25px;
-    }
-  }
-
-  &__inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    box-shadow: 0px 20px 40px rgba(250, 185, 0, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
-    transition: all .3s ease-in-out;
-
-    @include md {
-      width: 60px;
-      height: 60px;
-    }
-
-  }
-}
 
 .magnifier {
   position: absolute;
