@@ -88,6 +88,13 @@
 
     &__link {
       background: linear-gradient(90deg, #25D366 75%, #136D35 91.35%);
+      width: 52px;
+      height: 52px;
+
+      svg{
+        width: 22px;
+        height: 22px;
+      }
     }
 
     &__phones {

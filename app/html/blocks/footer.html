@@ -1,13 +1,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <div class="footer__logo-wrapper">
-        @@include('../components/logo-dark.html', {"class": "footer__logo"})
-        <p class="footer__logo-text">
-          Дизайнерский<br>
-          ремонт
-        </p>
-      </div>
+      @@include('../components/logo.html', {"class":"footer__logo"})
       <div class="footer__links">
         <a class="footer__link" href="#politics" data-fancybox>
           Политика конфиденциальности
@@ -16,25 +10,8 @@
           Обработка персональных данных
         </a>
       </div>
-      <div class="footer__ref">
-        <a class="footer__rekv" href="#rekv" data-fancybox>
-          <!-- @@include('../../images/icons/list.svg') -->
-          <span class="footer__rekv-text">Реквизиты компании</span>
-        </a>
-        <a class="footer__tfa" href="#" target="_blank">
-          <!-- @@include('../../images/icons/tfa.svg') -->
-          <span class="footer__tfa-text">Разработка сайта</span>
-        </a>
-      </div>
+      @@include('../components/social-block.html')
 
-      <div class="social-block footer__phone">
-        <a class="social-block__num footer__phone-num" href="tel:+79279395000">
-          +7 927 939 50 00
-        </a>
-        <a class="social-block__link" href="#callback" data-fancybox="">
-          Вам перезвонить?
-        </a>
-      </div>
 
     </div>
   </div>
