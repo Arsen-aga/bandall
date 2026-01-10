@@ -1,0 +1,92 @@
+.innovative-packaging {
+  padding: var(--indent) 0;
+  background-image: url(../images/innovative-packaging.webp);
+
+  &__title {
+    margin: 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 27px;
+
+    @include xl {
+      gap: 10px;
+    }
+
+    @include lg {
+      grid-auto-flow: column;
+      padding-bottom: 10px;
+      overflow-x: auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include lg {
+        width: 280px;
+    }
+  }
+
+  &__item-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: calc(230 / 280 * 100%);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  &__item-info {
+    background-color: #1d1915;
+    border-radius: 14px;
+    padding: 22px;
+    color: var(--light-color);
+    height: 100%;
+
+    @include xl {
+      padding: 15px;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+
+    @include xl {
+      font-size: 18px;
+    }
+  }
+
+  &__item-text {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+  }
+
+  &__btn {
+    margin: 50px auto 0;
+    max-width: 331px;
+
+    @include xl {
+      margin-top: 40px;
+    }
+
+    @include lg {
+      margin-top: 30px;
+    }
+
+    @include md {
+      margin-top: 25px;
+    }
+
+    @include sm {
+      margin-top: 20px;
+    }
+  }
+}
