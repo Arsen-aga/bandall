@@ -3,7 +3,7 @@
   padding: var(--indent) 0 190px;
 
   @include xl {
-    padding-bottom: 180px;
+    padding: var(--indent) 0;
   }
 
   @include lg {
@@ -18,6 +18,7 @@
 
     @include xl {
       margin-bottom: 40px;
+      gap: 60px;
     }
 
     @include lg {
@@ -26,6 +27,10 @@
 
     @include md {
       margin-bottom: 25px;
+      gap: 15px;
+      flex-direction: column;
+      align-items: start;
+      br{display: none;}
     }
 
     @include sm {
@@ -42,11 +47,11 @@
     color: var(--light-color);
 
     @include xl {
-      font-size: 56px;
+      font-size: 54px;
     }
 
     @include lg {
-      font-size: 50px;
+      font-size: 44px;
     }
 
     @include md {
@@ -84,7 +89,7 @@
     }
 
     @include lg {
-      font-size: 26px;
+      font-size: 24px;
     }
 
     @include md {

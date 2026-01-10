@@ -88,21 +88,13 @@ a {
   gap: 15px;
   width: 100%;
 
-  @include lg {
-    max-width: 140px;
-  }
-
-  @include md {
-    max-width: 170px;
-  }
-
-  @include sm {
-    max-width: 140px;
-  }
-
   svg {
     max-width: 104px;
     width: 100%;
+
+    @include xl {
+        max-width: 85px;
+    }
   }
 
   &__text {
@@ -223,6 +215,10 @@ a {
     font-weight: 600;
     font-size: 24px;
     line-height: calc(40/24*100%);
+
+    @include lg {
+        font-size: 20px;
+    }
   }
 
   &__phones-link {
@@ -299,7 +295,7 @@ a {
 
   @include md {
     height: 70px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   @include sm {
