@@ -143,7 +143,7 @@ a {
     min-width: 21px;
   }
 
-  &__info{
+  &__info {
     display: flex;
     flex-direction: column;
   }
@@ -153,7 +153,8 @@ a {
     font-size: 24px;
     line-height: calc(40/24*100%);
     transition: all .3s ease-in-out;
-    &:hover{
+
+    &:hover {
       color: var(--primary-hover);
     }
   }
@@ -166,7 +167,8 @@ a {
     text-underline-offset: 3px;
     opacity: 0.5;
     transition: all .3s ease-in-out;
-    &:hover{
+
+    &:hover {
       color: var(--primary-hover);
       opacity: 1;
     }
@@ -174,34 +176,64 @@ a {
 }
 
 .social-block {
-  max-width: 241px;
-
-  &__num {
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 127%;
-    color: var(--light-color);
-
-    @include xl {
-      font-size: 26px;
-    }
-
-    @include lg {
-      font-size: 22px;
-    }
-
-  }
+  max-width: 301px;
+  display: flex;
+  align-items: start;
+  gap: 20px;
 
   &__link {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    background-color: var(--whatsapp-color);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: var(--whatsapp-hover);
+      scale: 1.1;
+    }
+  }
+
+  &__phones {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+  }
+
+  &__phones-icon {
+    width: 14px;
+    height: 22px;
+    min-width: 14px;
+    min-height: 22px;
+    margin-top: 9px;
+  }
+
+  &__phones-top {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__phones-num {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: calc(40/24*100%);
+  }
+
+  &__phones-link {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(21/14*100%);
     text-decoration: underline;
     text-underline-offset: 3px;
-    color: var(--primary);
-    text-align: right;
-    width: 100%;
-    display: block;
+    color: #919191;
+    display: inline-block;
 
     @include lg {
       font-size: 14px;
