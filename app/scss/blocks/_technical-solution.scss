@@ -6,6 +6,19 @@
     outline-offset: -15px;
     padding: 70px 60px;
     position: relative;
+
+    @include xl {
+      padding: 50px;
+    }
+
+    @include lg {
+      padding: 35px;
+    }
+
+    @include xs {
+      padding: 25px;
+    outline-offset: -10px;
+    }
   }
 
   &__title {
@@ -18,19 +31,137 @@
     font-size: 22px;
     line-height: calc(34 / 22 * 100%);
     margin: 20px 0 30px;
+
+    @include xl {
+      margin: 20px 0;
+    }
+
+    @include lg {
+      margin: 15px 0;
+      font-size: 20px;
+    }
+
+    @include md {
+      margin-top: 10px;
+    }
+
+    @include sm {
+      font-size: 18px;
+    }
   }
 
-  &__form-labels{
-      max-width: 453px;
-      margin-bottom: 50px;
+  &__form-labels {
+    max-width: 453px;
+    margin-bottom: 50px;
+
+    @include xl {
+      margin-bottom: 40px;
+    }
+
+    @include lg {
+      margin-bottom: 30px;
+    }
+
+    @include md {
+      margin-bottom: 20px;
+    }
+
+    @include sm {
+      margin-bottom: 15px;
+    }
   }
 
-  &__form-bottom{
+  &__form-bottom {
     max-width: 705px;
   }
-  
-  &__form-inputs{
+
+  &__form-inputs {
     display: flex;
     gap: 10px;
+
+    @include md {
+      flex-direction: column;
+
+    }
+
+    label {
+      max-width: 360px;
+
+      @include md {
+        max-width: none;
+      }
+    }
+  }
+
+  &__form-btn {
+    box-shadow: none;
+
+    @include md {
+      max-width: none;
+    }
+  }
+
+  &__checkbox-block {
+    margin: 10px 16px 0 auto;
+    width: fit-content;
+
+    @include md {
+      margin: 10px auto 0;
+    }
+  }
+
+  &__form-right {
+    position: absolute;
+    top: 17px;
+    right: 0;
+  }
+
+  &__form-doc {
+    position: absolute;
+    left: 21px;
+    top: 187px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(311.68deg, #F37021 2.59%, #FF8236 97.41%);
+
+    input {
+      display: none;
+    }
+
+    @include lg {
+      left: auto;
+      right: 25px;
+    }
+
+    @include md {
+      top: 135px;
+      width: 60px;
+      height: 60px;
+      padding: 18px;
+    }
+
+    @include sm {
+      top: 120px;
+      right: 35px;
+    }
+
+    @include xs {
+        right: 25px;
+        top: 100px;
+    }
+  }
+
+  &__form-img {
+    @include xl {
+      max-width: 300px;
+    }
+
+    @include lg {
+      display: none;
+    }
   }
 }

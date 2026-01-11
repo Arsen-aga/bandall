@@ -68,6 +68,21 @@ a {
   color: var(--light-color);
 }
 
+.-mt-277{
+  margin-top: -277px;
+
+  @include xl {
+      margin-top: -240px;
+  }
+
+  @include lg {
+      margin-top: -110px;
+  }
+  @include sm {
+      margin-top: -70px;
+  }
+}
+
 .cursor {
   display: none;
 
@@ -80,6 +95,7 @@ a {
     justify-content: center;
   }
 }
+
 .play {
   position: absolute;
   top: 0;
@@ -97,6 +113,7 @@ a {
       scale: 1.2;
     }
   }
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -353,6 +370,7 @@ a {
     @include sm {
       flex-wrap: wrap;
       max-width: none;
+      gap: 10px;
     }
   }
 
@@ -372,7 +390,7 @@ a {
       }
     }
 
-    input:checked + .sms {
+    input:checked+.sms {
       background-color: var(--primary);
       color: var(--default-color);
       border-color: transparent;
@@ -383,7 +401,7 @@ a {
       }
     }
 
-    input:checked + .tel {
+    input:checked+.tel {
       background-color: var(--primary-2);
       color: var(--light-color);
       border-color: transparent;
@@ -394,7 +412,7 @@ a {
       }
     }
 
-    input:checked + .telegram {
+    input:checked+.telegram {
       background-color: var(--telegram-color);
       color: var(--light-color) !important;
       border-color: transparent;
@@ -405,7 +423,7 @@ a {
       }
     }
 
-    input:checked + .whatsapp {
+    input:checked+.whatsapp {
       background-color: var(--whatsapp-color);
       color: var(--light-color) !important;
       border-color: transparent;
@@ -530,7 +548,7 @@ a {
   }
 }
 
-._input {
+._input-label {
   height: 96px;
   width: 100%;
   background-color: var(--light-color);
@@ -538,14 +556,42 @@ a {
   box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.02);
   border-radius: 100px;
   transition: all 0.3s;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: calc(24 / 18 * 100%);
-  color: #858687;
-  padding: 35px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   position: relative;
+  padding: 35px;
 
-  &::before{
+  svg path {
+    fill: #CDCDCD;
+  }
+
+  &__input {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(24 / 18 * 100%);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #CDCDCD;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    &::placeholder {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: calc(24 / 18 * 100%);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #CDCDCD;
+  
+      @include md {
+        font-size: 14px;
+      }
+    }
+  }
+  
+  
+  &::before {
     content: 112;
   }
 
@@ -560,6 +606,7 @@ a {
   @include lg {
     padding: 25px;
     height: 80px;
+    gap: 10px;
   }
 
   @include md {
@@ -570,14 +617,58 @@ a {
     height: 65px;
   }
 
-  &::placeholder {
-    color: rgba($color: #1a1c1e, $alpha: 0.5);
+}
 
-    @include md {
-      font-size: 14px;
+.checkbox-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 12px;
+
+  input {
+    display: none !important;
+  }
+
+  input:checked+span svg {
+    scale: 1;
+  }
+
+  &__check {
+    min-width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(20 / 12 * 100%);
+    color: #939393;
+
+    a {
+      color: var(--primary);
+    }
+  }
+
+  svg {
+    scale: 0;
+    transition: all 0.3s ease-in-out;
+    width: 9px;
+    height: 6px;
+
+    path {
+      fill: var(--primary);
     }
   }
 }
+
+
 
 ._whatsapp-btn {
   display: flex;
@@ -777,58 +868,6 @@ a {
 
   &::after {
     rotate: 180deg;
-  }
-}
-
-.checkbox-block {
-  display: flex;
-  justify-content: center;
-  gap: 7.5px;
-  cursor: pointer;
-  font-size: 12px;
-
-  input {
-    display: none !important;
-  }
-
-  input:checked + span svg {
-    scale: 1;
-  }
-
-  &__check {
-    margin-top: 2px;
-    min-width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #999999;
-  }
-
-  &__text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(20 / 12 * 100%);
-    color: #939393;
-
-    a {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      color: var(--primary);
-    }
-  }
-
-  svg {
-    scale: 0;
-    transition: all 0.3s ease-in-out;
-    width: 9px;
-    height: 6px;
-
-    path {
-      fill: var(--primary);
-    }
   }
 }
 

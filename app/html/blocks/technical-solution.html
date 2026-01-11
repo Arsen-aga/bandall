@@ -50,12 +50,13 @@
       </div>
       <div class="technical-solution__form-bottom">
         <div class="technical-solution__form-inputs">
-          <label for="_input-label">
+          <label class="_input-label">
+            @@include('../../images/icons/phone.svg')
             <input
               class="_input-label__input technical-solution__form-inp"
               type="tel"
               name="phone"
-              placeholder="Введите ваш телефон"
+              placeholder="+7 (900) 000-00-00"
               required
             />
           </label>
@@ -64,10 +65,10 @@
             спецификацию + КП
           </button>
         </div>
-        <label class="checkbox-block">
+        <label class="checkbox-block technical-solution__checkbox-block">
           <input type="checkbox" name="access" required checked />
           <span class="checkbox-block__check">
-            <!-- @@include('../../images/icons/check.svg') -->
+            @@include('../../images/icons/check.svg')
           </span>
           <span class="checkbox-block__text">
             Я принимаю
@@ -78,9 +79,10 @@
         </label>
       </div>
       <div class="technical-solution__form-right">
-        <div class="technical-solution__form-icon">
+        <label class="technical-solution__form-doc">
+          <input type="file" name="file">
           @@include('../../images/icons/pdf-icon.svg')
-        </div>
+        </label>
         <img
           class="technical-solution__form-img"
           src="images/technical-solution.webp"
