@@ -105,14 +105,14 @@ a {
     height: 90px;
     border-radius: 50%;
     background-color: var(--primary-2);
-    box-shadow: 0px 20px 40px rgba(250, 185, 0, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
-    transition: all .3s ease-in-out;
+    box-shadow: 0px 20px 40px rgba(250, 185, 0, 0.2),
+      inset 0px 10px 25px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
 
     @include md {
       width: 60px;
       height: 60px;
     }
-
   }
 }
 
@@ -128,7 +128,7 @@ a {
     width: 100%;
 
     @include xl {
-        max-width: 85px;
+      max-width: 85px;
     }
   }
 
@@ -137,13 +137,11 @@ a {
     position: relative;
     font-weight: 400;
     font-size: 14px;
-    line-height: calc(22/14*100%);
-
-
+    line-height: calc(22 / 14 * 100%);
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       left: 0;
       background-color: rgba(0, 0, 0, 0.1);
@@ -153,7 +151,6 @@ a {
       transform: translateY(-50%);
     }
   }
-
 }
 
 .mail-block {
@@ -178,8 +175,8 @@ a {
   &__mail {
     font-weight: 600;
     font-size: 24px;
-    line-height: calc(40/24*100%);
-    transition: all .3s ease-in-out;
+    line-height: calc(40 / 24 * 100%);
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: var(--primary-hover);
@@ -189,11 +186,11 @@ a {
   &__link {
     font-weight: 500;
     font-size: 14px;
-    line-height: calc(22/14*100%);
+    line-height: calc(22 / 14 * 100%);
     text-decoration: underline;
     text-underline-offset: 3px;
     opacity: 0.5;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: var(--primary-hover);
@@ -218,7 +215,7 @@ a {
     min-height: 45px;
     border-radius: 50%;
     background-color: var(--whatsapp-color);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: var(--whatsapp-hover);
@@ -249,10 +246,10 @@ a {
   &__phones-num {
     font-weight: 600;
     font-size: 24px;
-    line-height: calc(40/24*100%);
+    line-height: calc(40 / 24 * 100%);
 
     @include lg {
-        font-size: 20px;
+      font-size: 20px;
     }
   }
 
@@ -260,7 +257,7 @@ a {
     margin-top: 8px;
     font-weight: 500;
     font-size: 14px;
-    line-height: calc(21/14*100%);
+    line-height: calc(21 / 14 * 100%);
     text-decoration: underline;
     text-underline-offset: 3px;
     color: #919191;
@@ -280,12 +277,6 @@ a {
   }
 }
 
-._section-lg {
-  max-width: 1880px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 ._main-btn {
   display: flex;
   justify-content: center;
@@ -299,15 +290,16 @@ a {
   text-align: center;
   color: var(--light-color);
   cursor: pointer;
-  transition: all .3s ease-in-out;
-  box-shadow: 0px 82px 33px rgba(235, 53, 0, 0.01), 0px 46px 28px rgba(235, 53, 0, 0.05), 0px 21px 21px rgba(235, 53, 0, 0.09), 0px 5px 11px rgba(235, 53, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 82px 33px rgba(235, 53, 0, 0.01),
+    0px 46px 28px rgba(235, 53, 0, 0.05), 0px 21px 21px rgba(235, 53, 0, 0.09),
+    0px 5px 11px rgba(235, 53, 0, 0.1);
   border-radius: 100px;
   font-weight: 700;
   font-size: 14px;
-  line-height: calc(24/14*100%);
+  line-height: calc(24 / 14 * 100%);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
 
   @include xl {
     height: 90px;
@@ -339,6 +331,253 @@ a {
   }
 }
 
+.form {
+  &__items {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(22 / 14 * 100%);
+    text-transform: uppercase;
+    color: #939393;
+    margin-bottom: 8px;
+  }
+
+  &__labels {
+    display: flex;
+    gap: 15px;
+
+    @include sm {
+      flex-wrap: wrap;
+      max-width: none;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    .tel,
+    .telegram,
+    .whatsapp {
+      svg path {
+        fill: #cacaca;
+      }
+    }
+
+    input:checked + .sms {
+      background-color: var(--primary);
+      color: var(--default-color);
+      border-color: transparent;
+
+      svg path {
+        stroke: var(--default-color);
+        fill-opacity: 1;
+      }
+    }
+
+    input:checked + .tel {
+      background-color: var(--primary-2);
+      color: var(--light-color);
+      border-color: transparent;
+
+      svg path {
+        fill: var(--light-color);
+        fill-opacity: 1;
+      }
+    }
+
+    input:checked + .telegram {
+      background-color: var(--telegram-color);
+      color: var(--light-color) !important;
+      border-color: transparent;
+
+      svg path {
+        fill: var(--light-color);
+        fill-opacity: 1;
+      }
+    }
+
+    input:checked + .whatsapp {
+      background-color: var(--whatsapp-color);
+      color: var(--light-color) !important;
+      border-color: transparent;
+
+      svg path {
+        fill: var(--light-color);
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  &__label-inner {
+    height: 42px;
+    border: 1px solid #cacaca;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(22 / 14 * 100%);
+    text-align: center;
+    color: #cacaca;
+    border-radius: 50px;
+
+    svg {
+      height: 20px;
+
+      path {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &.tel:hover {
+      border-color: var(--primary-2);
+      color: var(--primary-2);
+
+      svg path {
+        fill: var(--primary-2);
+        fill-opacity: 1;
+      }
+    }
+
+    &.sms:hover {
+      border-color: var(--primary);
+      color: var(--default-color);
+
+      svg path {
+        stroke: var(--default-color);
+        fill-opacity: 1;
+      }
+    }
+
+    &.whatsapp:hover {
+      border-color: var(--whatsapp-color);
+      color: var(--whatsapp-color);
+
+      svg path {
+        fill: var(--whatsapp-color);
+        fill-opacity: 1;
+      }
+    }
+
+    &.telegram {
+      svg {
+        height: 14px;
+      }
+
+      &:hover {
+        border-color: var(--telegram-color);
+        color: var(--telegram-color);
+
+        svg path {
+          fill: var(--telegram-color);
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__file-inner {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #cbd4dd;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 35px;
+
+    @include lg {
+      height: 80px;
+      padding: 20px;
+    }
+
+    @include sm {
+      height: 65px;
+    }
+  }
+
+  &__file-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(26 / 18 * 100%);
+
+    @include sm {
+      font-size: 16px;
+    }
+  }
+
+  &__checkbox {
+    margin-top: 15px;
+
+    @include sm {
+      margin-top: 10px;
+    }
+  }
+}
+
+._input {
+  height: 96px;
+  width: 100%;
+  background-color: var(--light-color);
+  border: 1px solid #ededed;
+  box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 100px;
+  transition: all 0.3s;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(24 / 18 * 100%);
+  color: #858687;
+  padding: 35px;
+  position: relative;
+
+  &::before{
+    content: 112;
+  }
+
+  &:focus {
+    background-color: var(--light-color);
+  }
+
+  @include xl {
+    height: 90px;
+  }
+
+  @include lg {
+    padding: 25px;
+    height: 80px;
+  }
+
+  @include md {
+    height: 70px;
+  }
+
+  @include sm {
+    height: 65px;
+  }
+
+  &::placeholder {
+    color: rgba($color: #1a1c1e, $alpha: 0.5);
+
+    @include md {
+      font-size: 14px;
+    }
+  }
+}
 
 ._whatsapp-btn {
   display: flex;
@@ -353,8 +592,9 @@ a {
   text-align: center;
   color: var(--light-color);
   cursor: pointer;
-  transition: all .3s ease-in-out;
-  box-shadow: 0px 20px 40px rgba(60, 191, 115, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 20px 40px rgba(60, 191, 115, 0.2),
+    inset 0px 10px 25px rgba(255, 255, 255, 0.2);
   font-weight: 600;
   font-size: 18px;
   line-height: 144%;
@@ -381,7 +621,8 @@ a {
 
   &:hover {
     background-color: var(--whatsapp-hover);
-    box-shadow: 0px 20px 40px rgba(60, 191, 115, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 20px 40px rgba(60, 191, 115, 0.2),
+      inset 0px 10px 25px rgba(255, 255, 255, 0.2);
   }
 
   &:active {
@@ -403,8 +644,9 @@ a {
   text-align: center;
   color: var(--light-color);
   cursor: pointer;
-  transition: all .3s ease-in-out;
-  box-shadow: 0px 20px 40px rgba(53, 169, 229, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 20px 40px rgba(53, 169, 229, 0.2),
+    inset 0px 10px 25px rgba(255, 255, 255, 0.2);
   font-weight: 600;
   font-size: 18px;
   line-height: 144%;
@@ -431,7 +673,8 @@ a {
 
   &:hover {
     background-color: var(--telegram-color);
-    box-shadow: 0px 20px 40px rgba(53, 169, 229, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 20px 40px rgba(53, 169, 229, 0.2),
+      inset 0px 10px 25px rgba(255, 255, 255, 0.2);
   }
 
   &:active {
@@ -447,7 +690,7 @@ a {
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 6px;
       height: 6px;
       rotate: 0deg;
@@ -458,10 +701,16 @@ a {
   }
 }
 
+._section-lg {
+  max-width: 1880px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .swiper-scrollbar {
   height: 10px !important;
   border-radius: 0;
-  background-color: #EDEDED;
+  background-color: #ededed;
 
   .swiper-scrollbar-drag {
     height: 10px;
@@ -483,7 +732,7 @@ a {
     height: 4px;
     background-color: var(--light-color);
     border-radius: 2px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 1;
   }
 
@@ -502,14 +751,14 @@ a {
   justify-content: center;
   align-items: center;
   background-color: var(--primary);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: var(--primary-hover);
   }
 
   &::after {
-    content: '';
+    content: "";
     width: 12px;
     height: 19px;
     background-position: center;
@@ -531,275 +780,6 @@ a {
   }
 }
 
-
-
-.magnifier {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: var(--primary);
-  box-shadow: 0px 20px 40px rgba(250, 185, 0, 0.2), inset 0px 10px 25px rgba(255, 255, 255, 0.2);
-
-  @include md {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-  }
-
-
-
-  &:hover {
-    background-color: var(--primary-hover);
-  }
-}
-
-.form {
-  &__items {
-    display: grid;
-    gap: 10px;
-  }
-
-  &__text {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: calc(22/14*100%);
-    text-transform: uppercase;
-    color: #939393;
-    margin-bottom: 8px;
-  }
-
-  &__labels {
-    display: flex;
-    gap: 6px;
-
-    @include sm {
-      flex-wrap: wrap;
-      max-width: none;
-    }
-  }
-
-  &__label {
-    width: 100%;
-    cursor: pointer;
-
-    input {
-      display: none;
-    }
-
-    .tel,
-    .telegram,
-    .whatsapp {
-      svg path {
-        fill: #999999;
-      }
-    }
-
-    input:checked+.sms {
-      background-color: var(--primary);
-      color: var(--default-color);
-      border-color: transparent;
-
-      svg path {
-        stroke: var(--default-color);
-        fill-opacity: 1;
-      }
-    }
-
-    input:checked+.tel {
-      background-color: var(--primary);
-      color: var(--default-color);
-      border-color: transparent;
-
-      svg path {
-        fill: var(--default-color);
-        fill-opacity: 1;
-      }
-    }
-
-    input:checked+.telegram {
-      background-color: var(--telegram-color);
-      color: var(--light-color) !important;
-      border-color: transparent;
-
-      svg path {
-        fill: var(--light-color);
-        fill-opacity: 1;
-      }
-    }
-
-    input:checked+.whatsapp {
-      background-color: var(--whatsapp-color);
-      color: var(--light-color) !important;
-      border-color: transparent;
-
-      svg path {
-        fill: var(--light-color);
-        fill-opacity: 1;
-      }
-    }
-  }
-
-  &__label-inner {
-    height: 42px;
-    border: 1px solid #939393;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    width: 100%;
-    transition: all .3s ease-in;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(22/14*100%);
-    text-align: center;
-    color: #939393;
-
-
-    svg {
-      height: 20px;
-
-      path {
-        transition: all .3s ease-in-out;
-      }
-    }
-
-    &.tel:hover {
-      background-color: var(--primary);
-      color: var(--default-color);
-
-      svg path {
-        fill: var(--default-color);
-        fill-opacity: 1;
-      }
-    }
-
-    &.sms:hover {
-      background-color: var(--primary);
-      color: var(--default-color);
-
-      svg path {
-        stroke: var(--default-color);
-        fill-opacity: 1;
-      }
-    }
-
-    &.whatsapp:hover {
-      background-color: var(--whatsapp-color);
-      color: var(--light-color);
-
-      svg path {
-        fill: var(--light-color);
-        fill-opacity: 1;
-      }
-    }
-
-    &.telegram {
-      svg {
-        height: 14px;
-      }
-
-      &:hover {
-        background-color: var(--telegram-color);
-        color: var(--light-color);
-
-        svg path {
-          fill: var(--light-color);
-          fill-opacity: 1;
-        }
-      }
-    }
-  }
-
-  &__file-inner {
-    width: 100%;
-    height: 80px;
-    border: 1px solid #CBD4DD;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 35px;
-
-    @include lg {
-      height: 80px;
-      padding: 20px;
-    }
-
-    @include sm {
-      height: 65px;
-    }
-  }
-
-  &__file-text {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: calc(26/18*100%);
-
-    @include sm {
-      font-size: 16px;
-    }
-  }
-
-  &__checkbox {
-    margin-top: 15px;
-
-    @include sm {
-      margin-top: 10px;
-    }
-  }
-}
-
-._input {
-  height: 100px;
-  width: 100%;
-  background-color: #FAFBFC;
-  border: 1px solid #F1F1F1;
-  transition: all .3s;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: calc(26/18*100%);
-  color: #858687;
-  padding: 35px;
-
-  &:focus {
-    background-color: var(--light-color);
-  }
-
-  @include xl {
-    height: 90px;
-  }
-
-  @include lg {
-    padding: 25px;
-    height: 80px;
-  }
-
-  @include md {
-    height: 70px;
-  }
-
-  @include sm {
-    height: 65px;
-  }
-
-  &::placeholder {
-    color: rgba($color: #1A1C1E, $alpha: 0.5);
-
-    @include md {
-      font-size: 14px;
-    }
-  }
-
-}
-
 .checkbox-block {
   display: flex;
   justify-content: center;
@@ -811,10 +791,9 @@ a {
     display: none !important;
   }
 
-  input:checked+span svg {
+  input:checked + span svg {
     scale: 1;
   }
-
 
   &__check {
     margin-top: 2px;
@@ -831,7 +810,7 @@ a {
   &__text {
     font-weight: 400;
     font-size: 12px;
-    line-height: calc(20/12*100%);
+    line-height: calc(20 / 12 * 100%);
     color: #939393;
 
     a {
@@ -843,7 +822,7 @@ a {
 
   svg {
     scale: 0;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 9px;
     height: 6px;
 
@@ -856,7 +835,7 @@ a {
 .divider {
   width: 100%;
   height: 1px;
-  background: #CBD4DD;
+  background: #cbd4dd;
   margin-top: 100px;
 
   @include xl {
@@ -866,9 +845,7 @@ a {
   @include sm {
     display: none;
   }
-
 }
-
 
 .mt-indent {
   margin-top: var(--indent);

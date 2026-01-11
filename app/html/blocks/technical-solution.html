@@ -1,0 +1,92 @@
+<section class="technical-solution">
+  <div class="container">
+    <form
+      method="POST"
+      action="#"
+      enctype="multipart/form-data"
+      class="technical-solution__form form form-submit"
+    >
+      <input
+        type="hidden"
+        name="from"
+        class="from"
+        value="Запишитесь на демо-показ в своем городе"
+      />
+      <input
+        type="hidden"
+        name="newToken"
+        value="<?php echo (rand(10000, 99999)) ?>"
+      />
+      <h2 class="technical-solution__title _title">
+        Получите техническое решение<br />
+        по системе <span>Bandall</span> под вашу <br />
+        продукцию и ТЗ:
+      </h2>
+      <p class="technical-solution__subtitle">
+        расчёт + спецификация + коммерческое предложение
+      </p>
+      <div class="form__labels technical-solution__form-labels">
+        <label class="form__label">
+          <input type="radio" name="call" value="Телефон" />
+          <span class="form__label-inner tel">
+            @@include('../../images/icons/phone.svg')
+            <span class="form__label-text"> Телефон </span>
+          </span>
+        </label>
+        <label class="form__label">
+          <input type="radio" name="call" value="WhatsApp" checked />
+          <span class="form__label-inner whatsapp">
+            @@include('../../images/icons/whatsapp.svg')
+            <span class="form__label-text"> WhatsApp </span>
+          </span>
+        </label>
+        <label class="form__label">
+          <input type="radio" name="call" value="Telegram" />
+          <span class="form__label-inner telegram">
+            @@include('../../images/icons/telegram.svg')
+            <span class="form__label-text"> Telegram </span>
+          </span>
+        </label>
+      </div>
+      <div class="technical-solution__form-bottom">
+        <div class="technical-solution__form-inputs">
+          <label for="_input-label">
+            <input
+              class="_input-label__input technical-solution__form-inp"
+              type="tel"
+              name="phone"
+              placeholder="Введите ваш телефон"
+              required
+            />
+          </label>
+          <button type="submit" class="technical-solution__form-btn _main-btn">
+            Получить расчет +<br />
+            спецификацию + КП
+          </button>
+        </div>
+        <label class="checkbox-block">
+          <input type="checkbox" name="access" required checked />
+          <span class="checkbox-block__check">
+            <!-- @@include('../../images/icons/check.svg') -->
+          </span>
+          <span class="checkbox-block__text">
+            Я принимаю
+            <a class="_link" href="/policy.php" target="_blank"
+              >условия передачи информации</a
+            >
+          </span>
+        </label>
+      </div>
+      <div class="technical-solution__form-right">
+        <div class="technical-solution__form-icon">
+          @@include('../../images/icons/pdf-icon.svg')
+        </div>
+        <img
+          class="technical-solution__form-img"
+          src="images/technical-solution.webp"
+          alt="technical-solution"
+        />
+      </div>
+    </form>
+  </div>
+</section>
