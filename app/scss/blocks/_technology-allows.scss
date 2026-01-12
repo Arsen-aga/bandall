@@ -1,5 +1,6 @@
 .technology-allows {
-  padding-top: var(--indent);
+  padding: var(--indent) 0;
+  position: relative;
 
   &__title {
     margin: 0;
@@ -66,5 +67,11 @@
     @include xl {
         br{display: none;}
     }
+  }
+
+  &__shares{
+    position: absolute;
+    right: -178px;
+    bottom: 7%;
   }
 }

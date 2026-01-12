@@ -82,6 +82,11 @@ a {
       margin-top: -70px;
   }
 }
+._section-lg {
+  max-width: 1890px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .cursor {
   display: none;
@@ -792,11 +797,7 @@ a {
   }
 }
 
-._section-lg {
-  max-width: 1880px;
-  width: 100%;
-  margin: 0 auto;
-}
+
 
 .swiper-scrollbar {
   height: 10px !important;
