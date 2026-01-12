@@ -68,18 +68,22 @@ a {
   color: var(--light-color);
 }
 
-.-mt-277{
+.-mt-385 {
+  margin-top: -385px;
+}
+.-mt-277 {
   margin-top: -277px;
-
+}
+.-mt-385,
+.-mt-277 {
   @include xl {
-      margin-top: -240px;
+    margin-top: -240px;
   }
-
   @include lg {
-      margin-top: -110px;
+    margin-top: -110px;
   }
-  @include sm {
-      margin-top: -70px;
+  @include md {
+    margin-top: -70px;
   }
 }
 ._section-lg {
@@ -395,7 +399,7 @@ a {
       }
     }
 
-    input:checked+.sms {
+    input:checked + .sms {
       background-color: var(--primary);
       color: var(--default-color);
       border-color: transparent;
@@ -406,7 +410,7 @@ a {
       }
     }
 
-    input:checked+.tel {
+    input:checked + .tel {
       background-color: var(--primary-2);
       color: var(--light-color);
       border-color: transparent;
@@ -417,7 +421,7 @@ a {
       }
     }
 
-    input:checked+.telegram {
+    input:checked + .telegram {
       background-color: var(--telegram-color);
       color: var(--light-color) !important;
       border-color: transparent;
@@ -428,7 +432,7 @@ a {
       }
     }
 
-    input:checked+.whatsapp {
+    input:checked + .whatsapp {
       background-color: var(--whatsapp-color);
       color: var(--light-color) !important;
       border-color: transparent;
@@ -515,29 +519,17 @@ a {
 
   &__file-inner {
     width: 100%;
-    height: 80px;
-    border: 1px solid #cbd4dd;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 35px;
-
-    @include lg {
-      height: 80px;
-      padding: 20px;
-    }
-
-    @include sm {
-      height: 65px;
-    }
+    border: none;
+    outline: none;
+    background-color: inherit;
   }
 
   &__file-text {
     font-weight: 500;
-    font-size: 18px;
-    line-height: calc(26 / 18 * 100%);
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.05em;
+    color: #cdcdcd;
 
     @include sm {
       font-size: 16px;
@@ -567,8 +559,11 @@ a {
   position: relative;
   padding: 35px;
 
-  svg path {
-    fill: #CDCDCD;
+  svg {
+    min-width: 14px;
+    path {
+      fill: #cdcdcd;
+    }
   }
 
   &__input {
@@ -576,8 +571,7 @@ a {
     font-size: 18px;
     line-height: calc(24 / 18 * 100%);
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #CDCDCD;
+    color: #cdcdcd;
     border: none;
     outline: none;
     background-color: inherit;
@@ -587,15 +581,14 @@ a {
       line-height: calc(24 / 18 * 100%);
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #CDCDCD;
-  
+      color: #cdcdcd;
+
       @include md {
         font-size: 14px;
       }
     }
   }
-  
-  
+
   &::before {
     content: 112;
   }
@@ -621,7 +614,6 @@ a {
   @include sm {
     height: 65px;
   }
-
 }
 
 .checkbox-block {
@@ -636,7 +628,7 @@ a {
     display: none !important;
   }
 
-  input:checked+span svg {
+  input:checked + span svg {
     scale: 1;
   }
 
@@ -644,7 +636,7 @@ a {
     min-width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -672,8 +664,6 @@ a {
     }
   }
 }
-
-
 
 ._whatsapp-btn {
   display: flex;
@@ -796,8 +786,6 @@ a {
     }
   }
 }
-
-
 
 .swiper-scrollbar {
   height: 10px !important;

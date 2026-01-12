@@ -1,0 +1,84 @@
+<section class="product-sample">
+  <div class="container">
+    <form
+      method="POST"
+      action="#"
+      enctype="multipart/form-data"
+      class="product-sample__form form form-submit"
+    >
+      <input
+        type="hidden"
+        name="from"
+        class="from"
+        value="Получить лучшее предложение"
+      />
+      <input
+        type="hidden"
+        name="newToken"
+        value="<?php echo (rand(10000, 99999)) ?>"
+      />
+      <h2 class="product-sample__title _title">
+        Отправьте нам <span>образец вашей продукции –</span><br />
+        мы проведём тестовую упаковку,
+      </h2>
+      <p class="product-sample__subtitle _subtitle">
+        подберём оптимальные материалы и покажем<br />
+        результат в фото или видео-формате
+      </p>
+      <div class="product-sample__form-bottom">
+        <div class="product-sample__form-inputs">
+          <label class="_input-label">
+            @@include('../../images/icons/phone.svg')
+            <input
+              class="_input-label__input product-sample__form-inp"
+              type="tel"
+              name="phone"
+              placeholder="+7 (900) 000-00-00"
+              required
+            />
+          </label>
+          <label class="_input-label form__file product-sample__file">
+            <input
+              class="hidden file"
+              type="file"
+              name="file"
+              onchange="ym(100236255,'reachGoal','kviz3')"
+            />
+            @@include('../../images/icons/download.svg')
+            <span class="form__file-inner">
+              <span class="form__file-text file-name"
+                >Прикрепить фото товара</span
+              >
+            </span>
+          </label>
+          <button type="submit" class="product-sample__form-btn _main-btn">
+            Получить<br />
+            лучшее предложение
+          </button>
+        </div>
+        <label class="checkbox-block product-sample__checkbox-block">
+          <input type="checkbox" name="access" required checked />
+          <span class="checkbox-block__check">
+            @@include('../../images/icons/check.svg')
+          </span>
+          <span class="checkbox-block__text">
+            Я принимаю
+            <a class="_link" href="/policy.php" target="_blank"
+              >условия передачи информации</a
+            >
+          </span>
+        </label>
+      </div>
+      <a class="product-sample__form-link" href="tel:+79155200681">
+        Или звоните: <span>+7 (915) 520 06 81</span>
+      </a>
+      <div class="product-sample__form-right">
+        <img
+          class="product-sample__form-img"
+          src="images/product-sample.webp"
+          alt="product-sample"
+        />
+      </div>
+    </form>
+  </div>
+</section>

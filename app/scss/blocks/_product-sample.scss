@@ -1,0 +1,163 @@
+.product-sample {
+  &__form {
+    background-color: var(--light-color);
+    border-radius: 24px;
+    outline: 1px solid rgba($color: #000000, $alpha: 0.1);
+    outline-offset: -15px;
+    padding: 70px 60px 77px;
+    position: relative;
+
+    @include xl {
+      padding: 50px;
+    }
+
+    @include lg {
+      padding: 35px;
+    }
+
+    @include xs {
+      padding: 25px;
+      outline-offset: -10px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin: 0;
+  }
+
+  &__subtitle {
+    text-align: left;
+    margin: 20px 0 60px;
+
+    @include xl {
+      margin: 20px 0 50px;
+    }
+
+    @include lg {
+      margin: 15px 0 35px;
+      font-size: 20px;
+    }
+
+    @include md {
+      margin: 10px 0 25px;
+    }
+
+    @include sm {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+  }
+
+  &__form-bottom {
+    max-width: 1040px;
+  }
+
+  &__form-inputs {
+    display: flex;
+    gap: 20px;
+    
+    @include xl {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include md {
+      flex-direction: column;
+    }
+
+    label {
+      max-width: 335px;
+
+      @include md {
+        max-width: none;
+      }
+    }
+  }
+
+  &__file {
+    svg {
+      path {
+        fill: var(--primary);
+      }
+    }
+  }
+
+  &__form-btn {
+    max-width: 330px;
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+
+    @include md {
+      max-width: none;
+    }
+  }
+
+  &__checkbox-block {
+    margin: 10px auto 0;
+    width: fit-content;
+
+    @include md {
+      margin: 10px auto 0;
+    }
+  }
+
+  &__form-link {
+    margin-top: 77px;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: calc(36 / 26 * 100%);
+    display: inline-block;
+
+    @include xl {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+
+    @include lg {
+      margin-top: 45px;
+        margin-left: 0;
+        font-size: 22px;
+    }
+
+    @include md {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    @include sm {
+        margin-top: 20px;
+        font-size: 18px;
+        text-wrap-mode: nowrap;
+    }
+
+    &:hover{
+      span{
+        color: var(--primary);
+      }
+    }
+
+    span{
+      font-weight: 600;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  &__form-right {
+    position: absolute;
+    bottom: 14px;
+    right: 0;
+  }
+
+  &__form-img {
+    @include xl {
+      max-width: 300px;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+}
