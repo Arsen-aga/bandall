@@ -712,6 +712,26 @@ a {
   }
 }
 
+.list-point {
+  li {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      background-image: url(../images/icons/icon-list.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 11px;
+      height: 8px;
+      left: 0;
+      top: 10px;
+    }
+  }
+}
 
 
 ._telegram-btn {
@@ -766,23 +786,7 @@ a {
   }
 }
 
-.list-point {
-  li {
-    position: relative;
-    padding-left: 16px;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 6px;
-      height: 6px;
-      rotate: 0deg;
-      background-color: var(--primary);
-      left: 0;
-      top: 10px;
-    }
-  }
-}
 
 .swiper-scrollbar {
   height: 10px !important;
