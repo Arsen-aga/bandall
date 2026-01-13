@@ -221,13 +221,21 @@
     "description": "btn: CSS Button class"
   },
   "HTML section": {
+    "scope": "html",
     "prefix": "sect",
     "body": [
       "<section class=\"${1:example}\">",
 			"	<div class=\"container\">",
-			"		<h2 class=\"${1:example}__title\">${2:title}</h2>",
-			"		<div class=\"${1:example}__${3:inner}\">",
-			"			${4:Content}",
+			"		<h2 class=\"${1:example}__title _title\">${2:title}</h2>",
+			"		<p class=\"${1:example}__subtitle _subtitle\">${2:subtitle}</p>",
+			"		<div class=\"${1:example}__inner\">",
+			"			Content",
+			"		</div>",
+			"		@@include('../components/cursor.html')",
+			"		<div class=\"${1:example}__items\">",
+			"		  <div class=\"${1:example}__item\">",
+			"			  Content",
+			"		  </div>",
 			"		</div>",
 			"	</div>",
       "</section>"

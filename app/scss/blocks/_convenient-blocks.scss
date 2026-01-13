@@ -1,37 +1,47 @@
-.main-directions {
+.convenient-blocks {
   padding-top: var(--indent);
-  position: relative;
-  z-index: 1;
+
+  &__title {
+    margin-bottom: 0;
+  }
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 
     @include xl {
-      gap: 15px;
+      gap: 10px;
     }
-    @include md {
-      grid-template-columns: repeat(1, 1fr);
+
+    @include lg {
+      grid-auto-flow: column;
+      padding-bottom: 10px;
+      overflow-x: auto;
     }
   }
 
   &__item {
-    background-image: url(../images/main-directions-bg.webp);
+    background-image: url(../images/convenient-blocks-item-bg.webp);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: cover;
+    position: relative;
     padding: 50px;
     border-radius: 14px;
-    position: relative;
+    color: var(--light-color);
     min-height: 470px;
 
-    @include lg {
+    @include xl {
       padding: 30px;
       min-height: 400px;
     }
+    @include md {
+      min-height: 350px;
+    }
 
-    @include xs {
+    @include lg {
+      width: 300px;
       br {
         display: none;
       }
@@ -65,14 +75,15 @@
   &__item-img {
     position: absolute;
     bottom: -50px;
-    right: 0;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
 
     @include xl {
-      width: 90%;
+      width: 82%;
     }
     @include md {
-      max-width: 330px;
-      bottom: 5px;
+      width: 79%;
     }
   }
 }
