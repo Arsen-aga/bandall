@@ -1,0 +1,39 @@
+.serial-production {
+  padding-top: var(--indent);
+  position: relative;
+
+  &__head {
+    margin-left: 100px;
+
+    @include lg {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  &__subtitle {
+    text-align: left;
+  }
+
+  &__inner {
+    position: relative;
+    padding-bottom: calc(800 / 1480 * 100%);
+    border-radius: 25px;
+    overflow: hidden;
+
+    @include xl {
+      margin: 0 15px;
+    }
+  }
+
+  &__shares {
+    position: absolute;
+    left: -30%;
+    bottom: -45%;
+    z-index: -1;
+  }
+}
