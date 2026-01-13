@@ -1,0 +1,265 @@
+.tape-work {
+  background-image: url(../images/tape-work-bg.webp);
+  background-position: bottom;
+  padding: 403px 0 var(--indent);
+  margin-top: -247px;
+
+  @include md { 
+    padding-top: 220px;
+    margin-top: -150px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 80px;
+
+    @include xl {
+      margin-bottom: 60px;
+    }
+
+    @include lg {
+      margin-bottom: 40px;
+    }
+
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: left;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    text-align: left;
+
+    @include xl {
+      margin-bottom: 35px;
+    }
+    @include lg {
+      margin-bottom: 30px;
+    }
+    @include md {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner-img {
+    max-width: 594px;
+
+    @include md {
+        max-width: 100%;
+    }
+  }
+
+  &__inner-right {
+    max-width: 500px;
+    width: 100%;
+
+    @include lg {
+        display: none;
+    }
+  }
+
+  &__inner-wrapper {
+    padding-bottom: calc(648 / 500 * 100%);
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include lg {
+        grid-auto-flow: column;
+        padding-bottom: 10px;
+        overflow-x: auto;
+        gap: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    min-height: 400px;
+    border-radius: 14px;
+    overflow: hidden;
+
+    @include xl {
+        min-height: 350px;
+    }
+
+    @include lg {
+        width: 300px;
+    }
+  }
+
+  &__item-inner {
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    color: var(--light-color);
+
+    @include xl {
+        padding: 25px;
+        br{display: none;}
+    }
+  }
+
+  &__item-step {
+    padding: 3px 18px;
+    border-radius: 100%;
+    background-color: var(--primary-2);
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: calc(28 / 18 * 100%);
+    margin-bottom: 22px;
+    display: inline-block;
+
+    @include xl {
+        margin-bottom: 15px;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: calc(34 / 26 * 100%);
+
+    @include xl {
+        font-size: 24px;
+    }
+
+    @include md {
+        font-size: 22px;
+    }
+  }
+
+  &__item-text {
+    margin-top: 10px;
+  }
+
+  &__bottom {
+    padding-top: 100px;
+    position: relative;
+
+    @include xl {
+        padding-top: 70px;
+    }
+
+    @include lg {
+        padding-top: 40px;
+    }
+  }
+
+  &__bottom-left {
+    margin-left: 100px;
+    margin-bottom: 50px;
+
+    @include xl {
+        margin-left: 0;
+    }
+
+    @include lg {
+        margin-bottom: 40px;
+    }
+
+    @include md {
+        margin-bottom: 20px;
+    }
+
+    @include sm {
+        margin-bottom: 15px;
+    }
+
+  }
+
+  &__bottom-title {
+    margin-bottom: 20px;
+    text-align: left;
+
+    @include lg {
+        margin-bottom: 15px;
+    }
+  }
+
+  &__elems {
+    display: grid;
+    gap: 15px;
+
+    @include xl {
+        gap: 10px;
+    }
+  }
+
+  &__elem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__elem-img {
+    max-width: 80px;
+
+    @include lg {
+        max-width: 60px;
+    }
+  }
+
+  &__elem-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(28 / 20 * 100%);
+    color: var(--light-color);
+    span {
+      font-weight: 500;
+    }
+
+    @include lg {
+        font-size: 18px;
+    }
+  }
+
+  &__bottom-right{
+    top: -27px;
+    right: 0;
+    position: absolute;
+
+    @include xl {
+        max-width: 63%;
+    }
+
+    @include lg {
+        top: 30px;
+        max-width: 50%;
+    }
+
+    @include md {
+        position: static;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+  }
+
+  &__bottom-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    @include md {
+        flex-direction: column;
+        gap: 10px;
+    }
+  }
+
+  &__bottom-btn{
+    max-width: 390px;
+  }
+}
