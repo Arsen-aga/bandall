@@ -1,0 +1,104 @@
+.tape-result {
+  padding-top: var(--indent);
+  position: relative;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 30px;
+    max-width: 1020px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: end;
+
+    @include xl {
+      align-items: center;
+    }
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 32px;
+    margin-bottom: 16px;
+    height: fit-content;
+
+    @include xl {
+      margin-bottom: 0;
+    }
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+        gap: 15px;
+    }
+    @include sm {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include lg {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+    @include sm {
+        text-align: left;
+        flex-direction: row;
+    }
+  }
+
+  &__item-left {
+    max-width: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    line-height: calc(28 / 20 * 100%);
+
+    span {
+      font-weight: 500;
+    }
+
+    @include lg {
+        font-size: 16px;
+    }
+  }
+  &__img {
+    height: fit-content;
+
+    @include xl {
+      max-width: 50%;
+    }
+    @include sm {
+        max-width: 100%;
+    }
+  }
+
+  &__image-bg {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: -1;
+    svg {
+      path {
+        fill: #d9d9d9;
+        fill-opacity: 0.12;
+      }
+    }
+  }
+}
