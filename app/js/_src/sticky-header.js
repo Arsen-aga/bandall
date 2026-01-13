@@ -15,5 +15,5 @@ if (header) {
     });
   }
 
-  // checkСoordinatesElem(header);
+  checkСoordinatesElem(header);
 }

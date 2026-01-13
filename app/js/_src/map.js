@@ -34,8 +34,8 @@ function initializeMap() {
     var myMap = new ymaps.Map(
       mapElement,
       {
-        center: [54.754649, 56.023140],
-        zoom: 18,
+        center: [50.621659, 36.525649],
+        zoom: 17,
       },
       {
         searchControlProvider: "yandex#search",
@@ -43,14 +43,14 @@ function initializeMap() {
     );
 
     var destinations = {
-      "г. Уфа,  просп. Салавата Юлаева, 99/1, офис 609": [54.754649, 56.023140],
+      "Белгородская область, г. Белгород, ул. Мирная, 27": [50.621659, 36.525649],
     };
 
     var myPlacemark = new ymaps.Placemark(
-      destinations["г. Уфа,  просп. Салавата Юлаева, 99/1, офис 609"],
+      destinations["Белгородская область, г. Белгород, ул. Мирная, 27"],
       {
         hintContent: "Офис",
-        balloonContent: "г. Уфа,  просп. Салавата Юлаева, 99/1, офис 609",
+        balloonContent: "Белгородская область, г. Белгород, ул. Мирная, 27",
       },
       {
         iconLayout: "default#image",

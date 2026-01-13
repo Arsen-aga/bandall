@@ -63,24 +63,24 @@
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a class="menu__link" href="#key"> О технологии </a>
+                    <a class="menu__link" href="#about"> О технологии </a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#objects"> Отрасли </a>
+                    <a class="menu__link" href="#industries"> Отрасли </a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#video-review">
+                    <a class="menu__link" href="#advantages">
                       Преимущества
                     </a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#review"> Каталог </a>
+                    <a class="menu__link" href="#catalog"> Каталог </a>
                   </li>
                   <li class="menu__item">
                     <a class="menu__link" href="#service"> Сервис </a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#guarantee"> Контакты </a>
+                    <a class="menu__link" href="#contacts"> Контакты </a>
                   </li>
                 </ul>
               </nav>
@@ -167,24 +167,24 @@
         <nav class="popup-menu__nav">
           <ul class="popup-menu__list">
             <li class="popup-menu__item">
-              <a class="popup-menu__link" href="#key"> О технологии </a>
+              <a class="popup-menu__link" href="#about"> О технологии </a>
             </li>
             <li class="popup-menu__item">
-              <a class="popup-menu__link" href="#objects"> Отрасли </a>
+              <a class="popup-menu__link" href="#industries"> Отрасли </a>
             </li>
             <li class="popup-menu__item">
-              <a class="popup-menu__link" href="#video-review">
+              <a class="popup-menu__link" href="#advantages">
                 Преимущества
               </a>
             </li>
             <li class="popup-menu__item">
-              <a class="popup-menu__link" href="#review"> Каталог </a>
+              <a class="popup-menu__link" href="#catalog"> Каталог </a>
             </li>
             <li class="popup-menu__item">
               <a class="popup-menu__link" href="#service"> Сервис </a>
             </li>
             <li class="popup-menu__item">
-              <a class="popup-menu__link" href="#guarantee"> Контакты </a>
+              <a class="popup-menu__link" href="#contacts"> Контакты </a>
             </li>
           </ul>
         </nav>
@@ -275,7 +275,7 @@
   </div>
 </section>
 
-  <section class="innovative-packaging _image-wrapper">
+  <section class="innovative-packaging _image-wrapper" id="about">
   <div class="container">
     <h2 class="innovative-packaging__title _title-white">
       Бандалл — инновационная<br />
@@ -1154,7 +1154,7 @@
 
 
 </section>
-  <section class="universal-solution _section-lg _image-wrapper">
+  <section class="universal-solution _section-lg _image-wrapper" id="industries">
   <div class="container">
     <h2 class="universal-solution__title _title">
       <span>Технология Бандалл –</span> <br />
@@ -1498,7 +1498,7 @@
 </section>
 
   </div>
-  <section class="main-directions">
+  <section class="main-directions" id="advantages">
   <div class="container">
     <h2 class="main-directions__title _title">
       Основные направления применения
@@ -2725,7 +2725,7 @@
   <img class="system-working__img" src="images/system-working.webp" alt="system-working">
 </section>
 
-  <section class="solution">
+  <section class="solution" id="catalog">
   <div class="container">
     <div class="solution__head">
       <h2 class="solution__title _title">
@@ -2979,7 +2979,7 @@
 </section>
 
   <div class="divider @@class"></div>
-  <section class="support">
+  <section class="support" id="service">
   <div class="container">
     <h2 class="support__title _title">Сервис и поддержка</h2>
     <div class="support__swiper-wrapper">
@@ -3152,62 +3152,56 @@
   </div>
 </section>
 
-
-
-
-
-
-  <section class="contacts _section-lg" id="contacts">
-  <div class="contacts__wrapper relative">
-    <div class="contacts__map" id="map"></div>
-    <div class="contacts__inner">
-      <div class="container">
-        <div class="contacts__content">
-          <h2 class="contacts__title _title">
-            Приезжайте<br>
-            к нам на встречу<br>
-            в офис
-          </h2>
-          <div class="contacts__items">
-            <div class="contacts__item contacts__item--phone">
-              <h4 class="contacts__item-title">
-                Контактный номер:
-              </h4>
-              <a class="contacts__item-text contacts__item-phone" href="tel:+79279395000">
-                +7 927 939-50-00
-              </a>
-            </div>
-            <div class="contacts__item">
-              <h4 class="contacts__item-title">
-                АДРЕС ОФИСА:
-              </h4>
-              <a class="contacts__item-text" target="_blank" href="https://yandex.ru/maps/-/CLwJN2lt">
-                г. Уфа,  просп. Салавата<br>
-                Юлаева, 99/1, офис 609
-              </a>
-            </div>
-            <div class="contacts__item">
-              <h4 class="contacts__item-title">
-                ГРАФИК РАБОТЫ: 
-              </h4>
-              <p class="contacts__item-text">
-                Пн — Пт, 9:00 — 19:00
-              </p>
-            </div>
-            <div class="contacts__item">
-              <h4 class="contacts__item-title">
-                E-mail: 
-              </h4>
-              <a class="contacts__item-text" href="mailto:remvd@mail.ru">
-                remvd@mail.ru
-              </a>
-            </div>
+  <section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="contacts__title _title">Контакты компании</h2>
+  </div>
+  <div class="contacts__map">
+    <div class="mymap" id="map"></div>
+    <div class="contacts__container container relative">
+      <div class="contacts__contacts">
+        <h3 class="contacts__contacts-name">Контактный номер:</h3>
+        <div class="contacts__contacts-inner">
+          <div class="contacts__contacts-block">
+            <p class="contacts__contacts-title">Продажи:</p>
+            <a
+              class="contacts__contacts-text"
+              href="tel:+79155200681"
+              >+7 (915) 520 06 81</a
+            >
+          </div>
+          <div class="contacts__contacts-block">
+            <p class="contacts__contacts-title">Сервис:</p>
+            <a
+              class="contacts__contacts-text"
+              href="tel:+79100303015"
+              >+7 (910) 030 30 15</a
+            >
+          </div>
+          <div class="contacts__contacts-block">
+            <p class="contacts__contacts-title">E-mail:</p>
+            <a
+              class="contacts__contacts-text"
+              href="mailto:info@rsv31.ru"
+              >info@rsv31.ru</a
+            >
+          </div>
+          <div class="contacts__contacts-block">
+            <p class="contacts__contacts-title">Адрес производства:</p>
+            <a class="contacts__contacts-text contacts__contacts-addrs" href="https://yandex.com/maps/-/CLdw5NnW" target="_blank">
+              Белгородская область,<br />
+              г. Белгород, ул. Мирная, 27
+            </a>
           </div>
         </div>
+        <a class="contacts__contacts-btn" href="#rekv" data-fancybox="">
+          Реквизиты компании
+        </a>
       </div>
     </div>
   </div>
 </section>
+
 </main>
 <footer class="footer">
   <div class="container">
@@ -3303,135 +3297,128 @@
     </div>
   </div>
 </div>
-<div class="popup big-popup" id="callback" style="display: none;">
-  <div class="popup__inner big-popup__inner relative">
-    <div class="popup__left big-popup__left _image-wrapper">
-      <div class="popup__manager">
-        <div class="popup__manager-wrapper">
-          <img class="popup__manager-img" src="images/manager.webp" alt="manager">
-        </div>
-        <div class="popup__manager-info">
-          <h5 class="popup__manager-name">
-            Анатолий Гагилев
-          </h5>
-          <p class="popup__manager-text">
-            Руководитель проектов
-          </p>
-        </div>
-      </div>
-      <h2 class="popup__title">
-        Закажите<br>
+<div class="popup callback" id="callback" style="display: none;">
+  <div class="popup__top">
+    <p class="popup__top-text">
+      Почти готово...
+    </p>
+  </div>
+  <div class="popup__inner">
+    <div class="popup__left">
+      <h2 class="popup__left-title">
+        Закажите <br>
         обратный звонок
       </h2>
-      <p class="popup__subtitle">
-        Наш специалист свяжется с вами<br>
-        в течение 5 минут или в удобное<br>
-        для вас время
-      </p>
-      <img class="popup__left-img" src="images/popup-phone.webp" alt="phone">
+      <div class="popup__left-content">
+        <h4 class="popup__left-name">
+          Владимир Исаев
+        </h4>
+        <p class="popup__left-text">
+          служба заботы о клиентах
+        </p>
+        <p class="popup__left-info">
+          Наш специалист свяжется<br>
+          с вами в течение 5 минут или<br>
+          в удобное для вас время
+        </p>
+        <img class="popup__left-sign" src="images/callback-2.webp" alt="callback-2">
+      </div>
+      <img class="popup__left-img" src="images/callback-1.webp" alt="callback-1">
     </div>
-    <form method="POST" action="#" enctype="multipart/form-data"
-      class="popup__form big-popup__form form form-submit _image-wrapper relative">
-      <div class="overlay"></div>
-      <input type="hidden" name="from" class="from" value="Запишитесь на демо-показ в своем городе">
+    <form class="popup__form form form-submit _image-wrapper" method="POST" action="#" enctype="multipart/form-data">
+      <input type="hidden" name="from" class="from" value="Закажите обратный звонок">
       <input type="hidden" name="newToken" value="<?php echo (rand(10000, 99999)) ?>">
       <h2 class="popup__form-title">
         Закажите <br>
         обратный звонок
       </h2>
       <p class="popup__form-subtitle">
-        Наш специалист свяжется с вами<br>
-        в течение 5 минут или в удобное<br>
-        для вас время
+        Наш специалист свяжется<br>
+        с вами в течение 5 минут или<br>
+        в удобное для вас время
       </p>
-      <div class="popup__form-inner">
-        <div class="form__items popup__items">
-          <div class="form__item">
-            <input class="_input popup__form-inp" type="tel" name="phone" placeholder="Введите номер телефона" required>
-          </div>
-          <div class="form__item">
-            <p class="form__text popup__form-text">
-              Выберите способ связи:
-            </p>
-            <div class="form__labels">
-              <label class="form__label">
-                <input type="radio" name="call" value="Телефон">
-                <span class="form__label-inner tel">
-                  <span class="form__label-text">
-                    Телефон
-                  </span>
-                  
+      <div class="popup__items">
+        <div class="popup__item">
+          <p class="popup__item-title">Введите Ваш телефон<span>*</span>:</p>
+          <input class="popup__form-inp" type="tel" name="tel" placeholder="7 (_ _ _) _ _ _ - _ _ - _ _ "
+            required>
+        </div>
+        <div class="popup__item">
+          <p class="popup__item-title">Выберите способ связи:</p>
+          <div class="form__labels popup__labels">
+            <label class="form__label popup__label">
+              <input type="radio" name="call" value="Телефон">
+              <span class="form__label-inner popup__label-inner phone">
+                <span class="form__label-text popup__label-text">
+                  По телефону
                 </span>
-              </label>
-              <label class="form__label">
-                <input type="radio" name="call" value="WhatsApp" checked>
-                <span class="form__label-inner whatsapp">
-                  <span class="form__label-text">
-                    WhatsApp
-                  </span>
-                  
+              </span>
+            </label>
+            <label class="form__label popup__label">
+              <input type="radio" name="call" value="WhatsApp" checked>
+              <span class="form__label-inner popup__label-inner whatsapp">
+                <span class="form__label-text popup__label-text">
+                  WhatsApp
                 </span>
-              </label>
-              <label class="form__label">
-                <input type="radio" name="call" value="Telegram">
-                <span class="form__label-inner telegram">
-                  <span class="form__label-text">
-                    Telegram
-                  </span>
-                  
-
+              </span>
+            </label>
+            <label class="form__label popup__label">
+              <input type="radio" name="call" value="Telegram">
+              <span class="form__label-inner popup__label-inner telegram">
+                <span class="form__label-text popup__label-text">
+                  Telegram
                 </span>
-              </label>
-            </div>
-          </div>
-          <div class="form__item">
-            <p class="form__text popup__form-text">
-              Выберите время звонка:
-            </p>
-            <div class="form__labels popup__labels-time time-check">
-              <label class="form__label popup__label-time">
-                <input type="radio" name="tab-time" value="Сейчас" checked>
-                <span class="form__label-inner popup__label-inner ">
-                  <span class="form__label-text">
-                    Сейчас
-                  </span>
-                </span>
-              </label>
-              <label class="form__label popup__label-time">
-                <input type="radio" name="tab-time" value="По времени">
-                <span class="form__label-inner popup__label-inner ">
-                  <span class="form__label-text">
-                    По времени
-                  </span>
-                </span>
-              </label>
-            </div>
-          </div>
-          <div class="form__item">
-            <p class="form__text popup__form-text">
-              Когда вам будет удобно принять звонок?
-            </p>
-            <input class="_input popup__inp-time time-input" type="text" name="time"
-              placeholder="Например, завтра в 12:00" disabled>
-            <button type="submit" class="form__btn popup__btn _main-btn">
-              Заказать обратный звонок
-            </button>
+              </span>
+            </label>
           </div>
         </div>
-        <label class="checkbox-block form__checkbox">
-          <input type="checkbox" name="access" required checked>
-          <span class="checkbox-block__check">
-            
-          </span>
-          <span class="checkbox-block__text">
-            Я принимаю условия <a class="_link" href="/policy.php" target="_blank">политики
-              конфиденциальности</a> и <a href="/agrreement.php" target="_blank">пользовательское соглашение</a>
-          </span>
-        </label>
+        <div class="popup__item time-script">
+          <p class="popup__item-title">Выберите время звонка:</p>
+          <div class="form__labels popup__labels ">
+            <label class="form__label popup__label">
+              <input type="radio" name="time" value="Сейчас" checked>
+              <span class="form__label-inner popup__label-inner">
+                <span class="form__label-text popup__label-text">
+                  Сейчас
+                </span>
+              </span>
+            </label>
+            <label class="form__label popup__label">
+              <input type="radio" name="time" value="По времени">
+              <span class="form__label-inner popup__label-inner">
+                <span class="form__label-text popup__label-text">
+                  По времени
+                </span>
+              </span>
+            </label>
+          </div>
+          <input class="_input popup__form-inp popup__inp-time hidden" type="text" name="date"
+            placeholder="Например: завтра в 12:00" required>
+        </div>
       </div>
+      <div class="form__bottom popup__form-bottom">
+        <div class="form__inputs">
+          <button type="submit" class="popup__form-btn _main-btn">
+            Заказать обратный звонок
+          </button>
+        </div>
+      </div>
+      <label class="checkbox-block form__checkbox">
+        <input type="checkbox" name="access" required>
+        <span class="checkbox-block__check">
+          <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.74334 2.50072L5.50034 6.74572C5.10934 7.13672 4.47634 7.13672 4.08634 6.74572L1.25734 3.91372C0.867344 3.52372 0.867344 2.89672 1.25734 2.50072C1.64834 2.10672 2.28134 2.10672 2.67234 2.50072L4.79334 4.62372L8.32834 1.08772C8.71934 0.694719 9.35234 0.694719 9.74334 1.08772C10.1333 1.48372 10.1333 2.10672 9.74334 2.50072Z" fill="#FFFF00"/>
+</svg>
+
+        </span>
+        <span class="checkbox-block__text">
+          Вы соглашаетесь с <a href="#politics" data-fancybox="">условиями обработки <br>персональных данных</a>
+        </span>
+      </label>
     </form>
   </div>
 </div>
+
 <div class="popup" id="change-number" style="display: none;">
   <form method="POST" action="#" enctype="multipart/form-data"
     class="popup__form form form-submit _image-wrapper relative">
