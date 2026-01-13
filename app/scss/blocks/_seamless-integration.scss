@@ -1,0 +1,85 @@
+.seamless-integration {
+  padding-top: 174px;
+
+  @include xl {
+    padding-top: 134px;
+  }
+  @include lg {
+    padding-top: 94px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    @include xl {
+      gap: 10px;
+    }
+
+    @include lg {
+      grid-auto-flow: column;
+      padding-bottom: 10px;
+      overflow-x: auto;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include xl {
+      br {
+        display: none;
+      }
+    }
+    @include lg {
+      width: 280px;
+    }
+  }
+
+  &__item-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: calc(250 / 287 * 100%);
+    border-radius: 14px;
+    overflow: hidden;
+
+    @include lg {
+      padding-bottom: 77%;
+    }
+  }
+
+  &__item-info {
+    margin-top: -35px;
+    border-radius: 14px;
+    padding: 25px 20px 30px 25px;
+    height: 100%;
+    background-color: var(--light-color);
+    z-index: 1;
+    position: relative;
+
+    @include xl {
+      padding: 15px;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+
+    @include xl {
+      font-size: 18px;
+    }
+  }
+
+  &__item-text {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+  }
+}
