@@ -296,3 +296,9 @@ background-color: var(--light-color);
 .fancybox__content:has(iframe) {
   height: 90% !important;
 }
+.fancybox__content#technical-solution {
+  max-width: 1230px;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}

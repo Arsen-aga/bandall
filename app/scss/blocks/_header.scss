@@ -18,6 +18,14 @@
     }
   }
 
+  &.bottom-none {
+    .header__bottom {
+      background-color: transparent;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
   &__top-inner {
     display: flex;
     align-items: center;
@@ -33,7 +41,7 @@
     width: 100%;
     max-width: 195px;
     height: 50px;
-    background-color: #EFEFEF;
+    background-color: #efefef;
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -42,12 +50,12 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 1.2;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
 
     @include xs {
-        max-width: 180px;
-        height: 45px;
+      max-width: 180px;
+      height: 45px;
     }
 
     &:hover {
@@ -84,11 +92,11 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 337px;
       height: 172px;
-      background: #EB3500;
+      background: #eb3500;
       border-radius: 0px 0px 0px 50px;
       z-index: 0;
       top: 0;
@@ -96,11 +104,11 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 337px;
       height: 172px;
-      background: #28211C;
+      background: #28211c;
       border-radius: 0px 0px 0px 50px;
       z-index: 0;
       top: 0;
@@ -119,9 +127,8 @@
       }
     }
 
-
     &__link {
-      background: linear-gradient(90deg, #25D366 75%, #136D35 91.35%);
+      background: linear-gradient(90deg, #25d366 75%, #136d35 91.35%);
       width: 52px;
       height: 52px;
       position: relative;
@@ -191,7 +198,7 @@
 
   &__top-logo {
     @include lg {
-    width: fit-content;
+      width: fit-content;
 
       .logo__text {
         display: none;
@@ -199,16 +206,13 @@
     }
   }
 
-
   &__top-phone {
-
     @include lg {
-        order: 1;
+      order: 1;
     }
 
     @include md {
       display: none;
     }
   }
-
 }

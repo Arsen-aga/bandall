@@ -1,36 +1,34 @@
 .front-block-2 {
   background-image: url(../images/front-block-2-bg.webp);
-  padding: 214px 0 var(--indent);
-  color: var(--light-color);
+  padding: 239px 0 150px;
+
+  @include xl {
+    padding-bottom: var(--indent);
+  }
 
   @include lg {
-    padding-top: 150px;
+    padding-top: 80px;
   }
 
-  @include md {
-    .overlay {
-      display: block;
-      background-color: rgba($color: #000000, $alpha: 0.5);
-    }
-  }
-
-  @include xs {
-    padding-top: 120px;
+  @include lg {
+      .overlay{
+        display: block;
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
+      }
   }
 
   &__title {
     font-weight: 600;
-    font-size: 72px;
-    line-height: 111%;
-    color: var(--light-color);
-    margin-bottom: 20px;
+    font-size: 52px;
+    line-height: calc(66 / 52 * 100%);
+    margin-bottom: 15px;
 
     @include xl {
-      font-size: 62px;
+      font-size: 44px;
     }
 
     @include lg {
-      font-size: 50px;
+      font-size: 38px;
       margin-bottom: 15px;
     }
 
@@ -46,16 +44,12 @@
 
   &__subtitle {
     font-weight: 400;
-    font-size: 28px;
-    line-height: calc(36/28*100%);
-    color: var(--light-color);
-    margin-bottom: 30px;
-
-    span {
-      font-weight: 600;
-    }
+    font-size: 24px;
+    line-height: calc(32 / 24 * 100%);
+    margin-bottom: 50px;
 
     @include xl {
+      margin-bottom: 40px;
       font-size: 26px;
     }
 
@@ -81,53 +75,80 @@
 
   &__info {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+
+    @include xl {
+        margin-bottom: 30px;
+    }
+    @include lg {
+        margin-bottom: 20px;
+    }
+
+    @include md {
+        margin-bottom: 15px;
+    }
+  }
+
+  &__info-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: #eb3500;
+
+    @include xs {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 24px;
+    }
   }
 
   &__info-text {
     font-weight: 400;
     font-size: 18px;
-    line-height: calc(26/18*100%);
-    color: var(--light-color);
+    line-height: calc(26 / 18 * 100%);
 
     @include xs {
+      br{display: none;}
       font-size: 16px;
     }
   }
 
-  &__bottom {
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
   &__number {
-    text-align: center;
     font-weight: 600;
-    font-size: 24px;
-    line-height: calc(32/24*100%);
-    padding: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 36px;
+    line-height: 1;
     color: var(--default-color);
+    margin-bottom: 30px;
 
     @include lg {
+      margin-bottom: 20px;
       padding: 20px;
       font-size: 22px;
     }
 
     @include xs {
+      margin-bottom: 15px;
       font-size: 20px;
     }
   }
 
-  &__btn{
-    @include lg {
-        max-width: none;
+  &__btn {
+    max-width: 390px;
+    @include xs {
+      max-width: none;
     }
   }
 }

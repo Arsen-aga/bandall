@@ -18,33 +18,27 @@ if (timeToggle.length && timeInput) {
 
 // Изменение заголовка и инпут from в попапе, по нажатию на кнопку в item
 
-const btns = document.querySelectorAll(".change-popup");
+const btns = document.querySelectorAll("[href='#technical-solution']");
 btns?.forEach((btn) => {
   btn.addEventListener("click", function () {
     const id = btn.href.split("#")[1];
     const modal = document.getElementById(id);
     const modalFrom = modal.querySelector('[name="from"]');
-    const modalYa = modal.querySelector('[name="yaCounter"]');
     const modalTitle = modal.querySelector("h2");
 
-    const startCalcText = "Получите прайс-лист + расчет сметы";
+    const startCalcText =
+      "Получите техническое решение<br /> по системе <span>Bandall</span> под вашу <br />продукцию и ТЗ:";
+    const startFromText =
+      "Получите техническое решение по системе Bandall под вашу продукцию и ТЗ:";
 
-    if (btn.classList.contains("price")) {
-      const item = btn.closest(".change-popup-item");
-      const changeTitle = item.querySelector(".change-popup-title").textContent;
-      modalYa.value = "catalog";
-      modalFrom.value = `${startCalcText} (${changeTitle
-        .trim()
-        .toLowerCase()})`;
-      modalTitle.textContent = `${startCalcText} (${changeTitle
-        .trim()
-        .toLowerCase()})`;
-
-      return;
-    }
-
-    modalFrom.textContent = "Получите консультацию";
-    modalFrom.value = "Получите консультацию";
-    modalYa.value = "consult";
+      if(btn.classList.contains('change-popup')){
+        const item = btn.closest(".change-popup-item");
+        const changeTitle = item.querySelector(".change-popup-title").textContent;
+        modalTitle.innerHTML = `${startCalcText} (${changeTitle.trim()})`;
+        modalFrom.value = `${startFromText} (${changeTitle.trim()})`;
+        return
+      }
+      modalTitle.innerHTML = startCalcText;
+      modalFrom.value = startFromText;
   });
 });
