@@ -1,0 +1,161 @@
+.manufacture {
+  padding: var(--indent) 0;
+  background-image: url(../images/manufacture-bg.webp);
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__cursor {
+    @include lg {
+      display: none;
+    }
+    @include md {
+      display: flex;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include xl {
+      gap: 15px;
+    }
+
+    @include md {
+      gap: 10px;
+      grid-auto-flow: column;
+      padding-bottom: 10px;
+      overflow-x: auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: var(--light-color);
+    border-radius: 14px;
+
+    &:nth-child(1) img {
+      right: 32px;
+    }
+    &:nth-child(2) img {
+      right: -89px;
+    }
+    &:nth-child(3) img {
+      right: 22px;
+    }
+    &:nth-child(4) img {
+      right: -46px;
+    }
+
+    @include lg {
+      &:nth-child(1) img,
+      &:nth-child(2) img,
+      &:nth-child(3) img,
+      &:nth-child(4) img {
+        right: 50%;
+      }
+    }
+    @include md {
+      width: 320px;
+    }
+
+    .overlay {
+      @include xl {
+        display: block;
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        border-radius: 14px;
+      }
+    }
+  }
+
+  &__item-inner {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    border-radius: 14px;
+
+    @include xl {
+      padding: 30px;
+    }
+    @include md {
+        br{display: none;}
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: calc(34 / 30 * 100%);
+
+    @include xl {
+      font-size: 26px;
+    }
+
+    @include lg {
+      font-size: 24px;
+    }
+
+    @include md {
+      font-size: 22px;
+    }
+  }
+
+  &__item-text {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(28 / 20 * 100%);
+
+    @include xl {
+      margin-top: 10px;
+    }
+    @include md {
+      font-size: 18px;
+    }
+  }
+  &__item-list {
+    margin: 15px 0 30px;
+    display: grid;
+    gap: 10px;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+
+    @include xl {
+      margin: 10px 0 20px;
+    }
+    @include md {
+      gap: 5px;
+      margin: 10px 0;
+    }
+  }
+
+  &__item-btn {
+    margin-top: auto;
+    max-width: 300px;
+    height: 80px;
+
+    @include md {
+      height: 70px;
+    }
+
+    @include sm {
+      height: 65px;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    top: 25px;
+    max-height: 90%;
+
+    @include lg {
+      transform: translateX(50%);
+      max-width: 90%;
+    }
+  }
+}
